@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion Supplemental Material">
+    <title>Office Comparison</title>
+
+    <link rel="stylesheet" href="report.css">
+    <script src="ImageBox.js"></script>
+</head>
+
+<script type="text/javascript">
+    var imageBoxes = [
+        {
+            "colorInput": "../Fullres_Images/RealSense/Office/Office_Color.png",
+            "depthInput": "../Fullres_Images/RealSense/Office/Office_ValidDepth.png",
+            "elements": [
+                "../Fullres_Images/RealSense/Office/Office_Result_JBF_15_0.png",
+                "../Fullres_Images/RealSense/Office/Office_Result_SRF_15_0.png",
+                "../Fullres_Images/RealSense/Office/Office_Result_FBS.png",
+                "../Fullres_Images/RealSense/Office/Office_Result_MultiResJBU_7_5.png",
+                "../Fullres_Images/RealSense/Office/Office_Result_MultiResSRF_7_5.png"
+            ],
+            "enableInsets": true,
+            "insetSize": 180,
+            "insetZoom": 3,
+            "insetNum": 5,
+            "names": [
+                "JBF",
+                "[Our] SRF",
+                "FBS",
+                "M-JBU",
+                "[Our] M-SRF"
+            ],
+            "title": "Office"
+        }
+    ];
+
+    function setup() {
+        var content = document.getElementById("content");
+        for (var i = 0; i < imageBoxes.length; i++)
+            new ImageBox(content, imageBoxes[i]);
+    }
+</script>
+
+<body onload="setup();">
+    <div class="content" id="content">
+    </div>
+</body>
+</html>

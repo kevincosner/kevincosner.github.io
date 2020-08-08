@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion Supplemental Material">
+    <title>Cable (Input A) Comparison</title>
+
+    <link rel="stylesheet" href="report.css">
+    <script src="ImageBox.js"></script>
+</head>
+
+<script type="text/javascript">
+    var imageBoxes = [
+        {
+            "colorInput": "../Fullres_Images/Middlebury/Cable/Cable_Color.png",
+            "depthInput": "../Fullres_Images/Middlebury/Cable/SetA/Cable_Depth.png",
+            "elements": [
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_Result_MultiResJBU.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_Result_FBS.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_Result_MultiResSRF.png",
+                "../Fullres_Images/Middlebury/Cable/Cable_REF.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_L1Error_MultiResJBU.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_L1Error_FBS.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_L1Error_MultiResSRF.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_L2Error_MultiResJBU.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_L2Error_FBS.png",
+                "../Fullres_Images/Middlebury/Cable/SetA/Cable_L2Error_MultiResSRF.png"
+            ],
+            "enableInsets": true,
+            "insetSize": 180,
+            "insetZoom": 3,
+            "insetNum": 4,
+            "names": [
+                "M-JBU",
+                "FBS",
+                "[Our] M-SRF",
+                "REF",
+                "M-JBU (L1E)",
+                "FBS (L1E)",
+                "M-SRF (L1E)",
+                "M-JBU (L2E)",
+                "FBS (L2E)",
+                "M-SRF (L2E)"
+            ],
+            "title": "Cable (Input A)"
+        }
+    ];
+
+    function setup() {
+        var content = document.getElementById("content");
+        for (var i = 0; i < imageBoxes.length; i++)
+            new ImageBox(content, imageBoxes[i]);
+    }
+</script>
+
+<body onload="setup();">
+    <div class="content" id="content">
+    </div>
+</body>
+</html>

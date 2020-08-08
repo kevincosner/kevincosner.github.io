@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion Supplemental Material">
+    <title>Image Comparisons</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="Pages/report.css">
+</head>
+
+<body">
+    <h1 class="title">Multi-Resolution Shared Representative Filtering<br>for Real-Time Depth Completion<br><br>Supplemental Material</h1>
+
+    <br><br>
+    <h3 class="common-text">Image viewers are borrowed and modified from <a href="https://cs.dartmouth.edu/~wjarosz/publications/bitterli19selectively.html">this page</a></h3>
+    
+    <br><br>
+    <hr>
+    <br><br>
+    
+    <h2 class="subtitle">Synthetic Data</h2>
+    <h3 class="common-text">Interactive results comparisons on the following methods:</h3>
+    <h3>
+        <center>
+        <table>
+            <tr><td><b>Single-pass joint-bilateral filtering (JBF)</b>, Kopf et al., ACM Trans. Graph., 26(3), 2007</td></tr>
+            <tr><td><b>Multi-resolution joint-bilateral upsampling (M-JBU)</b>, Richardt et al., Computer Graphics Forum (Proceedings of Eurographics), 31(2), 2012</td></tr>
+            <tr><td><b>The fast bilateral solver (FBS)</b>, Barron and Poole, Proceedings of European Conference on Computer Vision (ECCV), 2016</td></tr>
+            <tr><td><b>Single-pass shared representative filtering (SRF)</b>, our method</td></tr>
+            <tr><td><b>Multi-resolution shared representative filtering (M-SRF)</b>, our method</td></tr>
+        </table>
+        </center>
+    </h3>
+    <h3 class="common-text">All depth images are HD resolution (1280 x 720). <br>We allocated 15.0 ms for single-pass method (JBF and SRF); 7.5 milliseconds for multi-resolution methods (M-JBU and M-SRF). <br>
+                            We did not allocate time budget for FBS because it is difficult to control the execution time. It runs about 0.3 ~ 0.5 seconds. in the same environment.
+    </h3>
+    <h3>
+        <center>
+        <table>
+            <tr>
+                <td><center><a href="Pages/table_compare.html"><img src="Fullres_Images/Synthetic/Table/Table_Color.png" width="240"></img></a></center></td>
+                <td><center><a href="Pages/buddha_compare.html"><img src="Fullres_Images/Synthetic/Buddha/Buddha_Color.png" width="240"></img></a></center></td>
+                <td><center><a href="Pages/livingroom_compare.html"><img src="Fullres_Images/Synthetic/LivingRoom/LivingRoom_Color.png" width="240"></img></a></center></td>
+                <td><center><a href="Pages/outdoor_compare.html"><img src="Fullres_Images/Synthetic/Outdoor/Outdoor_Color.png" width="240"></img></a></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Table</font></center></td>
+                <td><center><font size = "+1">Buddha</font></center></td>
+                <td><center><font size = "+1">LivingRoom</font></center></td>
+                <td><center><font size = "+1">Outdoor</font></center></td>
+            </tr>
+        </table>
+        </center>
+    </h3>
+
+    <h3 class="common-text">Note: for L1 (MAE) and L2 (RMSE) error visualization, we mapped small error to blue color and large error to red color. <br>
+        For better visualization, we clamped the maximum error to 0.1 and 0.01 times the maximum depth in scene for L1 and L2 error, respectively.<br></h3>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <h2 class="subtitle">Intel RealSense D435 Data</h2>
+    <h3 class="common-text">Interactive results comparisons on the following methods:</h3>
+    <h3>
+        <center>
+        <table>
+            <tr><td><b>Single-pass joint-bilateral filtering (JBF)</b>, Kopf et al., ACM Trans. Graph., 26(3), 2007</td></tr>
+            <tr><td><b>Multi-resolution joint-bilateral upsampling (M-JBU)</b>, Richardt et al., Computer Graphics Forum (Proceedings of Eurographics), 31(2), 2012</td></tr>
+            <tr><td><b>The fast bilateral solver (FBS)</b>, Barron and Poole, Proceedings of European Conference on Computer Vision (ECCV), 2016</td></tr>
+            <tr><td><b>Single-pass shared representative filtering (SRF)</b>, our method</td></tr>
+            <tr><td><b>Multi-resolution shared representative filtering (M-SRF)</b>, our method</td></tr>
+        </table>
+        </center>
+    </h3>
+    <h3 class="common-text">All depth images are HD resolution (1280 x 720). <br>We allocated 15.0 ms for single-pass method (JBF and SRF); 7.5 milliseconds for multi-resolution methods (M-JBU and M-SRF). <br>
+                            We did not allocate time budget for FBS because it is difficult to control the execution time. It runs about 0.3 ~ 0.5 seconds. in the same environment.
+    </h3>
+    <h3>
+        <center>
+        <table>
+            <tr>
+                <td><center><a href="Pages/puppies_compare.html"><img src="Fullres_Images/RealSense/Puppies/Puppies_Color.png" width="240"></img></a></center></td>
+                <td><center><a href="Pages/man_compare.html"><img src="Fullres_Images/RealSense/Man/Man_Color.png" width="240"></img></a></center></td>
+                <td><center><a href="Pages/work_compare.html"><img src="Fullres_Images/RealSense/Work/Work_Color.png" width="240"></img></a></center></td>
+                <td><center><a href="Pages/office_compare.html"><img src="Fullres_Images/RealSense/Office/Office_Color.png" width="240"></img></a></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Puppies</font></center></td>
+                <td><center><font size = "+1">Man</font></center></td>
+                <td><center><font size = "+1">Work</font></center></td>
+                <td><center><font size = "+1">Office</font></center></td>
+            </tr>
+        </table>
+        </center>
+    </h3>
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <h2 class="subtitle">Middlebury 2014 Data</h2>
+    <h3 class="common-text">Interactive results comparisons on the following methods:</h3>
+    <h3>
+        <center>
+        <table>
+            <tr><td><b>Multi-resolution joint-bilateral upsampling (M-JBU)</b>, Richardt et al., Computer Graphics Forum (Proceedings of Eurographics), 31(2), 2012</td></tr>
+            <tr><td><b>The fast bilateral solver (FBS)</b>, Barron and Poole, Proceedings of European Conference on Computer Vision (ECCV), 2016</td></tr>
+            <tr><td><b>Multi-resolution shared representative filtering (M-SRF)</b>, our method</td></tr>
+        </table>
+        </center>
+    </h3>
+    <h3 class="common-text">Depth images have various resolutions (about 3000 x 2000). <br>We allocated 20.0 milliseconds for M-JBU and M-SRF. <br>
+                            We did not allocate time budget for FBS because it is difficult to control the execution time. It runs about 1.2 ~ 2.0 seconds. in the same environment.
+    </h3>
+    <h3>
+        <center>
+        <table>
+            <tr>
+                <td><center><img src="Fullres_Images/Middlebury/Adirondack/Adirondack_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Backpack/Backpack_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Bicycle1/Bicycle1_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Cable/Cable_Color.png" width="240"></img></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Adirondack [<a href="Pages/adirondack_A_compare.html">input A</a>] [<a href="Pages/adirondack_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Backpack [<a href="Pages/backpack_A_compare.html">input A</a>] [<a href="Pages/backpack_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Bicycle1 [<a href="Pages/bicycle1_A_compare.html">input A</a>] [<a href="Pages/bicycle1_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Cable [<a href="Pages/cable_A_compare.html">input A</a>] [<a href="Pages/cable_B_compare.html">inputB</a>]</font></center></td>
+            </tr>
+            <tr>
+                <td><center><img src="Fullres_Images/Middlebury/Classroom1/Classroom1_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Couch/Couch_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Flowers/Flowers_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Jadeplant/Jadeplant_Color.png" width="240"></img></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Classroom1 [<a href="Pages/classroom1_A_compare.html">input A</a>] [<a href="Pages/classroom1_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Couch [<a href="Pages/couch_A_compare.html">input A</a>] [<a href="Pages/couch_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Flowers [<a href="Pages/flowers_A_compare.html">input A</a>] [<a href="Pages/flowers_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Jadeplant [<a href="Pages/jadeplant_A_compare.html">input A</a>] [<a href="Pages/jadeplant_B_compare.html">inputB</a>]</font></center></td>
+            </tr>
+            <tr>
+                <td><center><img src="Fullres_Images/Middlebury/Mask/Mask_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Motorcycle/Motorcycle_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Piano/Piano_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Pipes/Pipes_Color.png" width="240"></img></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Mask [<a href="Pages/mask_A_compare.html">input A</a>] [<a href="Pages/mask_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Motorcycle [<a href="Pages/motorcycle_A_compare.html">input A</a>] [<a href="Pages/motorcycle_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Piano [<a href="Pages/piano_A_compare.html">input A</a>] [<a href="Pages/piano_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Pipes [<a href="Pages/pipes_A_compare.html">input A</a>] [<a href="Pages/pipes_B_compare.html">inputB</a>]</font></center></td>
+            </tr>
+            <tr>
+                <td><center><img src="Fullres_Images/Middlebury/Playroom/Playroom_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Playtable/Playtable_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Recycle/Recycle_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Shelves/Shelves_Color.png" width="240"></img></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Playroom [<a href="Pages/playroom_A_compare.html">input A</a>] [<a href="Pages/playroom_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Playtable [<a href="Pages/playtable_A_compare.html">input A</a>] [<a href="Pages/playtable_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Recycle [<a href="Pages/recycle_A_compare.html">input A</a>] [<a href="Pages/recycle_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Shelves [<a href="Pages/shelves_A_compare.html">input A</a>] [<a href="Pages/shelves_B_compare.html">inputB</a>]</font></center></td>
+            </tr>
+            <tr>
+                <td><center><img src="Fullres_Images/Middlebury/Shopvac/Shopvac_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Sticks/Sticks_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Storage/Storage_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Sword1/Sword1_Color.png" width="240"></img></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Shopvac [<a href="Pages/shopvac_A_compare.html">input A</a>] [<a href="Pages/shopvac_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Sticks [<a href="Pages/sticks_A_compare.html">input A</a>] [<a href="Pages/sticks_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Storage [<a href="Pages/storage_A_compare.html">input A</a>] [<a href="Pages/storage_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Sword1 [<a href="Pages/sword1_A_compare.html">input A</a>] [<a href="Pages/sword1_B_compare.html">inputB</a>]</font></center></td>
+            </tr>
+            <tr>
+                <td><center><img src="Fullres_Images/Middlebury/Sword2/Sword2_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Umbrella/Umbrella_Color.png" width="240"></img></center></td>
+                <td><center><img src="Fullres_Images/Middlebury/Vintage/Vintage_Color.png" width="240"></img></center></td>
+            </tr>
+            <tr>
+                <td><center><font size = "+1">Sword2 [<a href="Pages/sword2_A_compare.html">input A</a>] [<a href="Pages/sword2_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Umbrella [<a href="Pages/umbrella_A_compare.html">input A</a>] [<a href="Pages/umbrella_B_compare.html">inputB</a>]</font></center></td>
+                <td><center><font size = "+1">Vintage [<a href="Pages/vintage_A_compare.html">input A</a>] [<a href="Pages/vintage_B_compare.html">inputB</a>]</font></center></td>
+            </tr>
+        </table>
+        </center>
+    </h3>
+
+    <h3 class="common-text">Note: for L1 (MAE) and L2 (RMSE) error visualization, we mapped small error to blue color and large error to red color. <br>
+        For better visualization, we clamped the maximum error to 0.05 and 0.0025 times the maximum depth in scene for L1 and L2 error, respectively.<br></h3>
+    
+    <br><br>    
+
+</body>
+</html>

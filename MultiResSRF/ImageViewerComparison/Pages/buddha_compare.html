@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion Supplemental Material">
+    <title>Buddha Comparison</title>
+
+    <link rel="stylesheet" href="report.css">
+    <script src="ImageBox.js"></script>
+</head>
+
+<script type="text/javascript">
+    var imageBoxes = [
+        {
+            "colorInput": "../Fullres_Images/Synthetic/Buddha/Buddha_Color.png",
+            "depthInput": "../Fullres_Images/Synthetic/Buddha/Buddha_Depth.png",
+            "elements": [
+                "../Fullres_Images/Synthetic/Buddha/Buddha_Result_JBF_15_0.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_Result_SRF_15_0.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_Result_FBS.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_Result_MultiResJBU_7_5.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_Result_MultiResSRF_7_5.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_REF.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L1Error_JBF.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L1Error_SRF.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L1Error_FBS.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L1Error_MultiResJBU.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L1Error_MultiResSRF.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L2Error_JBF.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L2Error_SRF.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L2Error_FBS.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L2Error_MultiResJBU.png",
+                "../Fullres_Images/Synthetic/Buddha/Buddha_L2Error_MultiResSRF.png",
+            ],
+            "enableInsets": true,
+            "insetSize": 180,
+            "insetZoom": 3,
+            "insetNum": 6,
+            "names": [
+                "JBF",
+                "[Our] SRF",
+                "FBS",
+                "M-JBU",
+                "[Our] M-SRF",
+                "REF",
+                "JBF (L1E)",
+                "SRF (L1E)",
+                "FBS (L1E)",
+                "M-JBU (L1E)",
+                "M-SRF (L1E)",
+                "JBF (L2E)",
+                "SRF (L2E)",
+                "FBS (L2E)",
+                "M-JBU (L2E)",
+                "M-SRF (L2E)",
+            ],
+            "title": "Buddha"
+        }
+    ];
+
+    function setup() {
+        var content = document.getElementById("content");
+        for (var i = 0; i < imageBoxes.length; i++)
+            new ImageBox(content, imageBoxes[i]);
+    }
+</script>
+
+<body onload="setup();">
+    <div class="content" id="content">
+    </div>
+</body>
+</html>
