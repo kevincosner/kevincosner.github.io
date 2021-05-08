@@ -1,0 +1,66 @@
+
+<html>
+    <head>
+        <title> Dual-Matrix Sampling for Scalable Translucent Material Rendering </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Dual-Matrix Sampling for <br> Scalable Translucent Material Rendering</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a> &nbsp;&nbsp;&nbsp;
+        <a href="https://people.csail.mit.edu/tzumao/">Tzu-Mao Li</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.ie.nthu.edu.tw/p/406-1310-198077,r5910.php?Lang=en">Yu-Hsun Lin</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a>
+        <br>
+        <br>
+    
+        <div>
+        <a href="images/teaser_1.jpg"><img class="img-fluid rounded" src="images/teaser_1.jpg" width=260></a>
+        <a href="images/teaser_2.jpg"><img class="img-fluid rounded" src="images/teaser_2.jpg" width=260></a>
+        <a href="images/teaser_3.jpg"><img class="img-fluid rounded" src="images/teaser_3.jpg" width=260></a>
+        </div>
+        <div>
+            <p>
+            Images rendered by our dual-matrix sampling method.
+            </p>
+        </div>
+    
+        <hr class="style-two">
+        <p>
+        <font size=+1><b>Abstract</b></font><br>
+        This paper introduces a scalable algorithm for rendering translucent materials with complex lighting.We represent the
+        light transport with a diffusion approximation by a dual-matrix representation with the <i>Light-to-Surface</i> and <i>Surface-to-Camera</i>
+        matrices. By exploiting the structures within the matrices, the proposed method can locate surface samples with little contribution
+        by using only subsampled matrices and avoid wasting computation on these samples. The decoupled estimation of irradiance
+        and diffuse BSSRDFs also allows us to have a tight error bound, making the adaptive diffusion approximation more efficient
+        and accurate. Experiments show that our method outperforms previous methods for translucent material rendering, especially in
+        large scenes with massive translucent surfaces shaded by complex illumination.
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Publication</b></font><br>
+        Yu-Ting Wu, Tzu-Mao Li, Yu-Hsun Lin, Yung-Yu Chuang. <br>
+        Dual-Matrix Sampling for Scalable Translucent Material Rendering. <br>
+        IEEE Transactions on Visualization and Computer Graphics (TVCG), volume 21, number 3, page 363-374, March 2015. <a href="citation.bib">BibTeX</a>
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Downloads</b></font><br>
+        <div><a target="_blank" href="paper.pdf">TVCG 2015 paper (9.2MB PDF)</a></div>
+        <div><a target="_blank" href="https://ieeexplore.ieee.org/document/6994841">Digital library</a></div>
+        <div><a target="_blank" href="interactive_compare.html">Web interactive comparison</a></div>
+        <br>
+        <hr class="style-two">
+    
+    </body>
+</html>
+    

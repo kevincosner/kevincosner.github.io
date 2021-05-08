@@ -1,0 +1,167 @@
+
+<html>
+    <head>
+        <title> VisibilityCluster: Average Directional Visibility for Many-Light Rendering - Interactive Comparison </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+        
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/image-compare.js"></script>
+        <script src="../../js/jquery.flot.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.axislabels.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.dashes.js" type="text/javascript" language="javascript"></script>
+
+        <script>
+            $(window).resize(function()
+            {
+                $('.className').css({
+                    position:'absolute',
+                    left: ($(window).width() - $('.className').outerWidth())/2,
+                    top: ($(window).height() - $('.className').outerHeight())/2
+                });
+            });
+            // To initially run the function:
+            $(window).resize();
+        </script>
+        
+        <script type="text/javascript">
+            $(function () {
+              $('.vert_compare').qvertcompare();
+              $('.three_compare').qthreecompare();
+              $('.cross_compare').qcrosscompare();
+            });
+        </script>
+        
+        <script type="text/javascript">
+            var scenes = ["TownCompare", "LunchCompare", "KillerooCompare", "SponzaCompare", "RoomCompare", "ConstructionCompare", "HairballCompare"];
+            function SetComparison(scene) {
+                var target = scene + "Compare";
+                scenes.forEach(function(sceneName){
+                    var divObj = document.getElementById(sceneName);
+                    if (sceneName === target)
+                        divObj.style.display = "block";
+                    else 
+                        divObj.style.display = "none";
+                });
+            }
+        </script>
+
+        <style type="text/css">
+            .ba-layer_tl {position:absolute; top:0; left:0; z-index:3; border-right:3px solid #333; border-bottom:3px solid #333;}
+            .ba-layer_tr {position:absolute; top:0; left:0; z-index:2; border-bottom:3px solid #333;}
+            .ba-layer_bl {position:absolute; top:0; left:0; z-index:1; border-right:3px solid #333;}
+            .ba-layer_br {position:absolute; top:0; left:0; z-index:0;}
+    
+            .ba-caption_tl {position:absolute; bottom:10px; right:10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+            .ba-caption_tr {position:absolute; bottom:10px; left: 10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+            .ba-caption_bl {position:absolute; top:10px;    right:10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+            .ba-caption_br {position:absolute; top:10px;    left: 10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+        
+            img:hover {
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">VisibilityCluster: Average Directional Visibility for <br> Many-Light Rendering</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a>
+        <br>
+        <br>
+    
+        <p><font size=+2><b>Interactive Equal-Time Comparison</b></font></p>
+        <p>Image viewer is borrowed from <a href="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/comparison/index.html">this page</a>.</p>
+        <p>All results are generated on a machine with Intel Xeon 5420 CPU (2.5 GHz) and 32-GB RAM</p>
+    
+        <p>
+        <font size=+1><b>Scene (click on the image thumb to change comparison)</b></font>
+        <br>
+        <table>
+            <!-- Row 1 -->
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Town/Town_ManyLight.jpg"         width="180" onclick="SetComparison('Town')">    </img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Lunch/Lunch_ManyLight.jpg"       width="180" onclick="SetComparison('Lunch')">   </img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Killeroo/Killeroo_ManyLight.jpg" width="180" onclick="SetComparison('Killeroo')"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Sponza/Sponza_ManyLight.jpg"     width="180" onclick="SetComparison('Sponza')">  </img></center></td>
+            </tr>
+            <tr>
+                <td><center>Town (150 sec.)    </center></td>
+                <td><center>Lunch (200 sec.)   </center></td>
+                <td><center>Killeroo (300 sec.)</center></td>
+                <td><center>Sponza (600 sec.)  </center></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <!-- Row 2 -->
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Room/Room_ManyLight.jpg"                 width="180" onclick="SetComparison('Room')">        </img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Construction/Construction_ManyLight.jpg" width="180" onclick="SetComparison('Construction')"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Hairball/Hairball_ManyLight.jpg"         width="180" onclick="SetComparison('Hairball')">    </img></center></td>
+            </tr>
+            <tr>
+                <td><center>Room (300 sec.)        </center></td>
+                <td><center>Construction (500 sec.)</center></td>
+                <td><center>Hairball (800 sec.)    </center></td>
+            </tr>
+        </table>
+        </p>
+        
+
+        <font size=+1><b>Rendered Results (please zoom in the webpage to see the details)</b></font>
+        <div id="TownCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative;  display: none;">
+            <img src="images/Town/Town_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.028199" width="800" height="600" style="display: none;">
+            <img src="images/Town/Town_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.021414" width="800" height="600" style="display: none;">
+            <img src="images/Town/Town_VC.jpg"        alt="Our method                  <br>MSE:0.012905" width="800" height="600" style="display: none;">
+            <img src="images/Town/Town_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+        <div id="LunchCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative; display: none;">
+            <img src="images/Lunch/Lunch_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.064530" width="800" height="600" style="display: none;">
+            <img src="images/Lunch/Lunch_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.014324" width="800" height="600" style="display: none;">
+            <img src="images/Lunch/Lunch_VC.jpg"        alt="Our method                  <br>MSE:0.005783" width="800" height="600" style="display: none;">
+            <img src="images/Lunch/Lunch_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+        <div id="KillerooCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative; display: none;">
+            <img src="images/Killeroo/Killeroo_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.018630" width="800" height="600" style="display: none;">
+            <img src="images/Killeroo/Killeroo_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.010495" width="800" height="600" style="display: none;">
+            <img src="images/Killeroo/Killeroo_VC.jpg"        alt="Our method                  <br>MSE:0.004001" width="800" height="600" style="display: none;">
+            <img src="images/Killeroo/Killeroo_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+        <div id="SponzaCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative; display: none;">
+            <img src="images/Sponza/Sponza_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.143324" width="800" height="600" style="display: none;">
+            <img src="images/Sponza/Sponza_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.029546" width="800" height="600" style="display: none;">
+            <img src="images/Sponza/Sponza_VC.jpg"        alt="Our method                  <br>MSE:0.031098" width="800" height="600" style="display: none;">
+            <img src="images/Sponza/Sponza_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+        <div id="RoomCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative; display: none;">
+            <img src="images/Room/Room_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.020244" width="800" height="600" style="display: none;">
+            <img src="images/Room/Room_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.012640" width="800" height="600" style="display: none;">
+            <img src="images/Room/Room_VC.jpg"        alt="Our method                  <br>MSE:0.006246" width="800" height="600" style="display: none;">
+            <img src="images/Room/Room_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+        <div id="ConstructionCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative;">
+            <img src="images/Construction/Construction_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.111308" width="800" height="600" style="display: none;">
+            <img src="images/Construction/Construction_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.087237" width="800" height="600" style="display: none;">
+            <img src="images/Construction/Construction_VC.jpg"        alt="Our method                  <br>MSE:0.020968" width="800" height="600" style="display: none;">
+            <img src="images/Construction/Construction_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+        <div id="HairballCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative; display: none;">
+            <img src="images/Hairball/Hairball_Product.jpg"   alt="BIS [Wang and Akerlund 2009]<br>MSE:0.411024" width="800" height="600" style="display: none;">
+            <img src="images/Hairball/Hairball_IC.jpg"        alt="IC [Georgiev et al. 2012]   <br>MSE:0.410042" width="800" height="600" style="display: none;">
+            <img src="images/Hairball/Hairball_VC.jpg"        alt="Our method                  <br>MSE:0.081793" width="800" height="600" style="display: none;">
+            <img src="images/Hairball/Hairball_ManyLight.jpg" alt="Reference                                   " width="800" height="600" style="display: none;">
+        </div>
+
+        <br><br><br>
+    
+    </body>
+</html>
+
+
+    

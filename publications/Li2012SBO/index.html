@@ -1,0 +1,75 @@
+
+<html>
+    <head>
+        <title> SURE-based Optimization for Adaptive Sampling and Reconstruction </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">SURE-based Optimization for <br> Adaptive Sampling and Reconstruction</h3>
+        
+        <a href="https://people.csail.mit.edu/tzumao/">Tzu-Mao Li</a> &nbsp;&nbsp;&nbsp;
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a>
+        <br>
+        <br>
+    
+        <div><a href="images/teaser.png"><img class="img-fluid rounded" src="images/teaser.png" width=800></a></div>
+        <div>
+            <p>
+            Comparisons between greedy error minimization (<i>GEM</i>) [Rousselle et al. 2011] and our <i>SURE</i>-based filtering. 
+            With <i>SURE</i>, we are able to use kernels (cross bilateral filters in this case) that are more effective than 
+            <i>GEM</i>'s isotropic Gassians. Thus, our approach better adapts to anisotropic features (such as the motion 
+            blur pattern due to the motion of the airplane) and preserves scene details (such as the textures on the 
+            floor and curtains). The kernels of both methods are visualized for comparison.
+            </p>
+        </div>
+    
+        <hr class="style-two">
+        <p>
+        <font size=+1><b>Abstract</b></font><br>
+        We apply Stein's Unbiased Risk Estimator(<i>SURE</i>) to adaptive sampling and reconstruction to reduce noise in Monte Carlo 
+        rendering. <i>SURE</i> is a general unbiased estimator for mean squared error (MSE) in statistics. With <i>SURE</i>, we are 
+        able to estimate error for an arbitrary reconstruction kernel, enabling us to use more effective kernels rather than being 
+        restricted to the symmetric ones used in previous work. It also allows us to allocate more samples to areas with higher 
+        estimated MSE. Adaptive sampling and reconstruction can therefore be processed within an optimization framework. We also 
+        propose an efficient and memory-friendly approach to reduce the impact of noisy geometry features where there is depth of 
+        field or motion blur. Experiments show that our method produces images with less noise and crisper details than previous methods.
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Publication</b></font><br>
+        Tzu-Mao Li, Yu-Ting Wu, Yung-Yu Chuang. <br>
+        SURE-based Optimization for Adaptive Sampling and Reconstruction. <br>
+        ACM Transactions on Graphics (Proceedings of ACM SIGGRAPH Asia 2012), volume 31, number 6, article 194, Singapore, November 2012. 
+        <a href="citation.bib">BibTeX</a>
+        </p>
+        <hr class="style-two">
+
+        <p>
+        <font size=+1><b>Errata</b></font><br>
+        Section 5.1:<br>
+        The parameters should be "sigma_fk=0.8 for normal, sigma_fk=0.25 for texture color, sigma_fk=0.6 for depth".
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Downloads</b></font><br>
+        <div><a target="_blank" href="paper.pdf">SIGGRAPH Asia 2012 paper (28.4MB PDF)</a></div>
+        <div><a target="_blank" href="supp.pdf">SIGGRAPH Asia 2012 supplementary material (8.9MB PDF)</a></div>
+        <div><a target="_blank" href="slides.pptx">SIGGRAPH Asia 2012 presentation (13.4MB PPTX)</a></div>
+        <div><a target="_blank" href="https://dl.acm.org/doi/10.1145/2366145.2366213">Digital library</a></div>
+        <div><a target="_blank" href="interactive_compare.html">Web interactive comparison</a></div>
+        <br>
+        <hr class="style-two">
+    
+    </body>
+</html>
+    

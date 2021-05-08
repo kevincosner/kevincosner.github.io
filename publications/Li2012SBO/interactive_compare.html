@@ -1,0 +1,138 @@
+
+<html>
+    <head>
+        <title> SURE-based Optimization for Adaptive Sampling and Reconstruction </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+        
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/image-compare.js"></script>
+        <script src="../../js/jquery.flot.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.axislabels.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.dashes.js" type="text/javascript" language="javascript"></script>
+
+        <script>
+            $(window).resize(function()
+            {
+                $('.className').css({
+                    position:'absolute',
+                    left: ($(window).width() - $('.className').outerWidth())/2,
+                    top: ($(window).height() - $('.className').outerHeight())/2
+                });
+            });
+            // To initially run the function:
+            $(window).resize();
+        </script>
+        
+        <script type="text/javascript">
+            $(function () {
+              $('.vert_compare').qvertcompare();
+              $('.three_compare').qthreecompare();
+              $('.cross_compare').qcrosscompare();
+            });
+        </script>
+        
+        <script type="text/javascript">
+            var scenes = ["SibenikCompare", "TeapotCompare", "TownCompare", "SponzaCompare"];
+            function SetComparison(scene) {
+                var target = scene + "Compare";
+                scenes.forEach(function(sceneName){
+                    var divObj = document.getElementById(sceneName);
+                    if (sceneName === target)
+                        divObj.style.display = "block";
+                    else 
+                        divObj.style.display = "none";
+                });
+            }
+        </script>
+
+        <style type="text/css">
+            .ba-layer_tl {position:absolute; top:0; left:0; z-index:3; border-right:3px solid #333; border-bottom:3px solid #333;}
+            .ba-layer_tr {position:absolute; top:0; left:0; z-index:2; border-bottom:3px solid #333;}
+            .ba-layer_bl {position:absolute; top:0; left:0; z-index:1; border-right:3px solid #333;}
+            .ba-layer_br {position:absolute; top:0; left:0; z-index:0;}
+    
+            .ba-caption_tl {position:absolute; bottom:10px; right:10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+            .ba-caption_tr {position:absolute; bottom:10px; left: 10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+            .ba-caption_bl {position:absolute; top:10px;    right:10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+            .ba-caption_br {position:absolute; top:10px;    left: 10px; z-index:120; color:#fff; text-align:center; padding:5px; font-size:12px; font-family:arial; display:none;}
+        
+            img:hover {
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">SURE-based Optimization for <br> Adaptive Sampling and Reconstruction</h3>
+        
+        <a href="https://people.csail.mit.edu/tzumao/">Tzu-Mao Li</a> &nbsp;&nbsp;&nbsp;
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a>
+        <br>
+        <br>
+    
+        <p><font size=+2><b>Interactive Equal-Time Comparison</b></font></p>
+        <p>Image viewer is borrowed from <a href="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/comparison/index.html">this page</a>.</p>
+        <p>All results are generated on a machine with Intel Xeon E5420 CPU (2.5 GHz) and 32-GB RAM, using 8 threads.</p>
+    
+        <p>
+        <font size=+1><b>Scene (click on the image thumb to change comparison)</b></font>
+        <br>
+        <table>
+            <!-- Row 1 -->
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Sibenik/ref.png" width="180" onclick="SetComparison('Sibenik')"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Teapot/ref.png"  width="180" onclick="SetComparison('Teapot')"> </img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Town/ref.png"    width="210" onclick="SetComparison('Town')">   </img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Sponza/ref.png"  width="210" onclick="SetComparison('Sponza')"> </img></center></td>
+            </tr>
+            <tr>
+                <td><center>Sibenik (140 sec.)</center></td>
+                <td><center>Teapot (40 sec.) </center></td>
+                <td><center>Town (60 sec.)   </center></td>
+                <td><center>Sponza (900 sec.)</center></td>
+            </tr>
+        </table>
+        </p>
+        
+
+        <font size=+1><b>Rendered Results (please zoom in the webpage to see the details)</b></font>
+        <div id="SibenikCompare" class="cross_compare" style="width: 800px; height: 800px; cursor: crosshair; overflow: hidden; position: relative; ">
+            <img src="images/Sibenik/mc.png"  alt="Uniform MC                                       <br>MSE:0.029946" width="800" height="800" style="display: none;">
+            <img src="images/Sibenik/gem.png" alt="Greedy Error Minimization [Rousselle et al. 2011]<br>MSE:0.002070" width="800" height="800" style="display: none;">
+            <img src="images/Sibenik/sbf.png" alt="Our method                                       <br>MSE:0.001489" width="800" height="800" style="display: none;">
+            <img src="images/Sibenik/ref.png" alt="Reference                                                        " width="800" height="800" style="display: none;">
+        </div>
+        <div id="TeapotCompare" class="cross_compare" style="width: 800px; height: 800px; cursor: crosshair; overflow: hidden; position: relative;  display: none;">
+            <img src="images/Teapot/mc.png"  alt="Uniform MC                                       <br>MSE:0.199485" width="800" height="800" style="display: none;">
+            <img src="images/Teapot/gem.png" alt="Greedy Error Minimization [Rousselle et al. 2011]<br>MSE:0.171002" width="800" height="800" style="display: none;">
+            <img src="images/Teapot/sbf.png" alt="Our method                                       <br>MSE:0.143123" width="800" height="800" style="display: none;">
+            <img src="images/Teapot/ref.png" alt="Reference                                                        " width="800" height="800" style="display: none;">
+        </div>
+        <div id="TownCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative;  display: none;">
+            <img src="images/Town/mc.png"  alt="Uniform MC                                       <br>MSE:0.029797" width="800" height="600" style="display: none;">
+            <img src="images/Town/gem.png" alt="Greedy Error Minimization [Rousselle et al. 2011]<br>MSE:0.018352" width="800" height="600" style="display: none;">
+            <img src="images/Town/sbf.png" alt="Our method                                       <br>MSE:0.018023" width="800" height="600" style="display: none;">
+            <img src="images/Town/ref.png" alt="Reference                                                        " width="800" height="600" style="display: none;">
+        </div>
+        <div id="SponzaCompare" class="cross_compare" style="width: 800px; height: 600px; cursor: crosshair; overflow: hidden; position: relative;  display: none;">
+            <img src="images/Sponza/mc.png"  alt="Uniform MC                                       <br>MSE:0.133096" width="800" height="600" style="display: none;">
+            <img src="images/Sponza/gem.png" alt="Greedy Error Minimization [Rousselle et al. 2011]<br>MSE:0.017605" width="800" height="600" style="display: none;">
+            <img src="images/Sponza/sbf.png" alt="Our method                                       <br>MSE:0.012097" width="800" height="600" style="display: none;">
+            <img src="images/Sponza/ref.png" alt="Reference                                                        " width="800" height="600" style="display: none;">
+        </div>
+
+        <br><br><br>
+
+    </body>
+</html>
+
+
+    
