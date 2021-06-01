@@ -1,0 +1,232 @@
+
+<html>
+    <head>
+        <title> Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion - Interactive Comparison </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="js/report.css">
+        
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/image-compare.js"></script>
+        <script src="../../js/jquery.flot.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.axislabels.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.dashes.js" type="text/javascript" language="javascript"></script>
+        <script src="js/ImageBox.js"></script>
+
+        <script type="text/javascript">
+            var imageBoxes = [
+                {
+                    "inputColor": "images/Middlebury2014/Adirondack/Adirondack_Color.png",
+                    "inputDepth": "images/Middlebury2014/Adirondack/SetA/Adirondack_Depth.png",
+                    "set": "SetA",
+                    "elements": [
+                        "images/Middlebury2014/Adirondack/SetA/Adirondack_Result_MultiResJBU.png",
+                        "images/Middlebury2014/Adirondack/SetA/Adirondack_Result_FBS.png",
+                        "images/Middlebury2014/Adirondack/SetA/Adirondack_Result_MultiResSRF.png",
+                        "images/Middlebury2014/Adirondack/Adirondack_REF.png",
+                    ],
+                    "enableInsets": true,
+                    "insetSize": 180,
+                    "insetZoom": 3,
+                    "insetNum": 4,
+                    "names": [
+                        "M-JBU",
+                        "FBS",
+                        "M-SRF",
+                        "REF",
+                    ],
+                    "title": "Adirondack"
+                }
+            ];
+
+            var curImageBox;
+
+            function SetComparison(scene, set, m1, m2, m3, p1, p2, p3) {                               
+                // Update table.
+                var table = document.getElementById("quanCompareTable");
+                var tableContent = "<tr><td width=150><b>Method</b></td><td width=150><b>M-JBU</b></td><td width=150><b>FBS</b></td><td width=150><b>M-SRF</b></td></tr>";
+                tableContent += "<tr><td>MAE</td><td>" + m1 + "</td><td>" + m2 + "</td><td>" + m3 + "</td></tr>";
+                tableContent += "<tr><td>PSNR</td><td>" + p1 + "</td><td>" + p2 + "</td><td>" + p3 + "</td></tr>";
+                table.innerHTML = tableContent;
+                
+                // Remove and re-create image box.
+                Clear();
+
+                var content = document.getElementById("qualitativeComparison");
+
+                imageBoxes[0].inputColor = "images/Middlebury2014/" + scene + "/" + scene + "_Color.png";
+                imageBoxes[0].inputDepth = "images/Middlebury2014/" + scene + "/" + set + "/" + scene + "_Depth.png";
+                imageBoxes[0].title = scene;
+                imageBoxes[0].elements[0] = "images/Middlebury2014/" + scene + "/" + set + "/" + scene + "_Result_MultiResJBU.png";
+                imageBoxes[0].elements[1] = "images/Middlebury2014/" + scene + "/" + set + "/" + scene + "_Result_FBS.png";
+                imageBoxes[0].elements[2] = "images/Middlebury2014/" + scene + "/" + set + "/" + scene + "_Result_MultiResSRF.png";
+                imageBoxes[0].elements[3] = "images/Middlebury2014/" + scene + "/" + scene + "_REF.png";
+                    
+                curImageBox = new ImageBox(content, imageBoxes[0]);
+            }
+
+            function Clear() {
+                // Remove old qualitativeComparison div.
+                var content = document.getElementById("qualitativeComparison");
+                content.remove();
+                // Create new qualitativeComparison div.
+                var qualCompare = document.createElement("div");
+                qualCompare.className = "content";
+                qualCompare.id = "qualitativeComparison";
+                qualCompare.style.width = 800;
+                document.body.appendChild(qualCompare);
+            }
+        </script>
+    </head>
+    
+    <body onload="SetComparison('Adirondack', 'SetA', '0.0260', '0.0258', '0.0204', '31.93', '33.92', '36.13')">
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Multi-Resolution Shared Representative Filtering for <br> Real-Time Depth Completion</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://people.csail.mit.edu/tzumao/">Tzu-Mao Li</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://jdily.github.io/">I-Chao Shen</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        Hong-Shiang Lin<sup>4</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a></a><sup>1</sup>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.csail.mit.edu/">MIT CSAIL</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.fihmb.com/about/default.aspx">FIH Mobile Limited</a><sup>4</sup>
+        <br>
+        <br>
+    
+        <p><font size=+2><b>Interactive Comparison on <a target="_blank" href="https://vision.middlebury.edu/stereo/data/scenes2014/">Middlebury 2014</a> Data</b></font></p>
+        <p>Image viewer is borrowed from <a href="https://cs.dartmouth.edu/~wjarosz/publications/bitterli19selectively.html">this page</a>.</p>
+        <p>All results are generated on a machine with Intel Core i5-7400K at 3.0 GHz, 16-GB of RAM, and an
+           NVIDIA GeForce GTX 2080 Ti graphics card.</p>
+    
+        <p>
+        <font size=+1><b>Scenes (click on the thumbnail to select the scene comparison shown at the bottom of the page)</b></font><br>
+        <table>
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Adirondack/Adirondack_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Backpack/Backpack_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Bicycle1/Bicycle1_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Cable/Cable_Thumb.png" width="180"></img></center></td>
+            </tr>
+            <tr>
+                <td><center>Adirondack<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Adirondack', 'SetA', '0.0260', '0.0258', '0.0204', '31.93', '33.92', '36.13')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Adirondack', 'SetB', '0.0265', '0.0244', '0.0188', '31.99', '31.33', '36.13')">input B</div></center></td>
+                <td><center>Backpack<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Backpack', 'SetA', '0.0147', '0.0150', '0.0119', '38.52', '40.08', '41.27')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Backpack', 'SetB', '0.0145', '0.0116', '0.0123', '40.12', '42.10', '41.54')">input B</div></center></td>
+                <td><center>Bicycle1<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Bicycle1', 'SetA', '0.0329', '0.0345', '0.0282', '33.80', '34.26', '34.40')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Bicycle1', 'SetB', '0.0338', '0.0310', '0.0259', '31.01', '34.61', '35.07')">input B</div></center></td>
+                <td><center>Cable<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Cable', 'SetA', '0.0158', '0.0122', '0.0111', '35.01', '37.27', '38.71')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Cable', 'SetB', '0.0150', '0.0184', '0.0110', '33.49', '32.81', '37.71')">input B</div></center></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Classroom1/Classroom1_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Couch/Couch_Thumb.png" width="150"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Flowers/Flowers_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Jadeplant/Jadeplant_Thumb.png" width="180"></img></center></td>
+            </tr>
+            <tr>
+                <td><center>Classroom1<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Classroom1', 'SetA', '0.0513', '0.0538', '0.0337', '32.06', '33.70', '35.07')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Classroom1', 'SetB', '0.0613', '0.0539', '0.0401', '29.04', '32.47', '32.80')">input B</div></center></td>
+                <td><center>Couch<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Couch', 'SetA', '0.0464', '0.0532', '0.0318', '31.87', '32.63', '33.83')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Couch', 'SetB', '0.0476', '0.0387', '0.0261', '30.84', '35.47', '35.82')">input B</div></center></td>
+                <td><center>Flowers<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Flowers', 'SetA', '0.0302', '0.0290', '0.0205', '26.48', '31.22', '31.28')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Flowers', 'SetB', '0.0245', '0.0217', '0.0155', '28.29', '33.52', '33.86')">input B</div></center></td>
+                <td><center>Jadeplant<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Jadeplant', 'SetA', '0.0352', '0.0352', '0.0291', '31.70', '32.49', '32.20')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Jadeplant', 'SetB', '0.0340', '0.0367', '0.0245', '30.60', '32.14', '33.66')">input B</div></center></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Mask/Mask_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Motorcycle/Motorcycle_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Piano/Piano_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Pipes/Pipes_Thumb.png" width="180"></img></center></td>
+            </tr>
+            <tr>
+                <td><center>Mask<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Mask', 'SetA', '0.0304', '0.0273', '0.0213', '29.65', '31.75', '31.83')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Mask', 'SetB', '0.0297', '0.0231', '0.0222', '29.58', '33.13', '32.00')">input B</div></center></td>
+                <td><center>Motorcycle<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Motorcycle', 'SetA', '0.0870', '0.0887', '0.0805', '26.40', '27.41', '26.93')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Motorcycle', 'SetB', '0.0822', '0.0891', '0.0788', '26.54', '27.10', '26.79')">input B</div></center></td>
+                <td><center>Piano<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Piano', 'SetA', '0.0306', '0.0262', '0.0252', '34.59', '36.77', '36.54')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Piano', 'SetB', '0.0329', '0.0310', '0.0241', '33.54', '34.52', '37.55')">input B</div></center></td>
+                <td><center>Pipes<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Pipes', 'SetA', '0.2438', '0.2072', '0.1831', '22.85', '24.94', '25.46')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Pipes', 'SetB', '0.2519', '0.2136', '0.1976', '23.35', '25.14', '25.18')">input B</div></center></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Playroom/Playroom_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Playtable/Playtable_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Recycle/Recycle_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Shelves/Shelves_Thumb.png" width="180"></img></center></td>
+            </tr>
+            <tr>
+                <td><center>Playroom<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Playroom', 'SetA', '0.0462', '0.0427', '0.0354', '32.32', '29.91', '34.54')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Playroom', 'SetB', '0.0507', '0.0497', '0.0424', '31.32', '32.63', '33.07')">input B</div></center></td>
+                <td><center>Playtable<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Playtable', 'SetA', '0.0307', '0.0315', '0.0269', '34.27', '32.84', '36.20')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Playtable', 'SetB', '0.0359', '0.0333', '0.0321', '32.65', '33.75', '34.29')">input B</div></center></td>
+                <td><center>Recycle<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Recycle', 'SetA', '0.0182', '0.0167', '0.0134', '33.18', '34.39', '36.41')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Recycle', 'SetB', '0.0173', '0.0140', '0.0126', '35.50', '39.05', '39.46')">input B</div></center></td>
+                <td><center>Shelves<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Shelves', 'SetA', '0.0259', '0.0272', '0.0199', '35.15', '36.62', '36.90')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Shelves', 'SetB', '0.0292', '0.0334', '0.0180', '34.97', '34.57', '39.77')">input B</div></center></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Shopvac/Shopvac_Thumb.png" width="150"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Sticks/Sticks_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Storage/Storage_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Sword1/Sword1_Thumb.png" width="180"></img></center></td>
+            </tr>
+            <tr>
+                <td><center>Shopvac<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Shopvac', 'SetA', '0.0344', '0.0345', '0.0313', '33.35', '35.38', '34.77')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Shopvac', 'SetB', '0.0463', '0.0407', '0.0367', '32.18', '34.99', '33.55')">input B</div></center></td>
+                <td><center>Sticks<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Sticks', 'SetA', '0.0096', '0.0084', '0.0083', '38.34', '39.76', '39.78')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Sticks', 'SetB', '0.0086', '0.0085', '0.0076', '39.75', '39.95', '40.35')">input B</div></center></td>
+                <td><center>Storage<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Storage', 'SetA', '0.0385', '0.0443', '0.0234', '28.42', '30.60', '31.71')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Storage', 'SetB', '0.0680', '0.0681', '0.0312', '23.97', '24.74', '30.15')">input B</div></center></td>
+                <td><center>Sword1<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Sword1', 'SetA', '0.0274', '0.0281', '0.0213', '32.46', '36.65', '37.26')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Sword1', 'SetB', '0.0242', '0.0221', '0.0206', '35.52', '37.96', '37.79')">input B</div></center></td>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Sword2/Sword2_Thumb.png" width="150"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Umbrella/Umbrella_Thumb.png" width="180"></img></center></td>
+                <td><center><img class="img-fluid rounded" src="images/Middlebury2014/Vintage/Vintage_Thumb.png" width="180"></img></center></td>
+            </tr>
+            <tr>
+                <td><center>Sword2<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Sword2', 'SetA', '0.0172', '0.0140', '0.0095', '32.42', '37.16', '37.81')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Sword2', 'SetB', '0.0154', '0.0188', '0.0111', '34.29', '33.03', '36.78')">input B</div></center></td>
+                <td><center>Umbrella<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Umbrella', 'SetA', '0.0530', '0.0524', '0.0310', '31.00', '32.61', '35.90')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Umbrella', 'SetB', '0.0282', '0.0282', '0.0234', '35.05', '37.52', '37.87')">input B</div></center></td>
+                <td><center>Vintage<br><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Vintage', 'SetA', '0.0221', '0.0171', '0.0167', '36.01', '40.24', '41.45')">input A</div><div class="btn btn-outline vert-offset-top-1" role="button" onclick="SetComparison('Vintage', 'SetB', '0.0300', '0.0233', '0.0204', '33.16', '36.71', '38.25')">input B</div></center></td>
+            </tr>
+        </table>
+        </p>
+        
+        <p>
+            <font size=+1><b>Compared Methods</b></font><br>
+            Multi-Res. Joint Bilateral Upsampling (M-JBU) [Richardt et al. 2012]<br>
+            Fast Bilateral Solver (FBS) [Barron and Poole 2016]<br>
+            Multi-Res. Shared Representative Filtering (M-SRF) [Our method]
+        </p>
+
+        <p>
+            <font size=+1><b>Implementation and Time Budgets</b></font><br>
+            Multi-Res. Joint Bilateral Upsampling [Richardt et al. 2012] and our method are implemented with Unity shaders, running on GPU. We allocated 20 ms. as time budget to complete the depth map.
+            For Fast Bilateral Solver [Barron and Poole 2016], we use the authors' CPU python implementation. It takes about 1200 ~ 2000 ms. 
+        </p>
+
+        <p>
+            <font size=+1><b>Mean Absolute Error (MAE) and Peak Signal-to-Noise Ratio (PSNR)</b></font>
+            <table id="quanCompareTable">
+                <tr>
+                    <td width=150><b>Method</b></td>
+                    <td width=150><b>M-JBU</b></td>
+                    <td width=150><b>FBS</b></td>
+                    <td width=150><b>M-SRF</b></td>
+                </tr>
+                <tr>
+                    <td>MAE</td>
+                    <td>0.0260</td>
+                    <td>0.0258</td>
+                    <td>0.0204</td>
+                </tr>
+                <tr>
+                    <td>PSNR</td>
+                    <td>31.93</td>
+                    <td>33.92</td>
+                    <td>36.13</td>
+                </tr>
+            </table>
+        </p>
+
+        <div class="content" id="qualitativeComparison"></div>
+
+        <br><br><br>
+
+    </body>
+</html>
+
+
+    

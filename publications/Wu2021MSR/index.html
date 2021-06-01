@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+        <title> Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Multi-Resolution Shared Representative Filtering for <br> Real-Time Depth Completion</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://people.csail.mit.edu/tzumao/">Tzu-Mao Li</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://jdily.github.io/">I-Chao Shen</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        Hong-Shiang Lin<sup>4</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a></a><sup>1</sup>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.csail.mit.edu/">MIT CSAIL</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.fihmb.com/about/default.aspx">FIH Mobile Limited</a><sup>4</sup>
+        <br>
+        <br>
+    
+        <div><a href="images/teaser.png"><img class="img-fluid rounded" src="images/teaser_preview.png" width=800></a></div>
+        <div>
+            <p>
+            Qualitative comparison of Multi-Resolution Joint Bilateral Upsampling (M-JBU, Richardt et al. 2012), The Fast Bilateral 
+            Solver (FBS, Barron and Poole 2016), and our Multi-Resolution Shared Representative Filtering (M-SRF). M-JBU and M-SRF 
+            takes 7.5 ms while FBS takes 320.2 ms. Our method (M-SRF) can better adapt to hole shapes and preserve depth discontinuities 
+            than previous methods.
+            </p>
+        </div>
+    
+        <hr class="style-two">
+        <p>
+        <font size=+1><b>Abstract</b></font><br>
+        We present shared representative filtering for real-time high-resolution depth completion with RGB-D sensors. Conventional
+        filtering-based methods face a dilemma when the missing regions of the depth map are large. When the filter window is small,
+        the filter fails to include enough samples. On the other hand, when the window is large, the method could oversmooth depth
+        boundaries due to the error introduced by the extra samples. Our method adapts the filter kernels to the shape of the missing
+        regions to collect a sufficient number of samples while avoiding oversmoothing. We collect depth samples by searching for a
+        small set of similar pixels, which we call the representatives, using an efficient line search algorithm. We then combine the
+        representatives using a joint bilateral weight. Experiments show that our method can filter a high-resolution depth map within
+        a few milliseconds while outperforming previous filtering-based methods on both real-world and synthetic data in terms of both
+        efficiency and accuracy, especially when dealing with large missing regions in depth maps.
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Publication</b></font><br>
+        Yu-Ting Wu, Tzu-Mao Li, I-Chao Shen, Hong-Shiang Lin, Yung-Yu Chuang. <br>
+        Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion. <br>
+        Accepted to High-Performance Graphics 2021. <a href="">BibTex (Coming Soon)</a><br>
+        <!--
+        <a href="citation.bib">BibTeX</a><br>
+        -->
+        <br>
+        <a target="_blank" href="">HPG Paper (Coming Soon)</a><br>
+        <a target="_blank" href="">Digital library (Coming Soon)</a>    
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Supplemental</b></font><br>
+        <a target="_blank" href="" >HPG supplementary document (Coming Soon)</a><br>
+        <a target="_blank" href="" >Web interactive comparison on synthetic data and Intel RealSense data (Coming Soon)</a><br>
+        <a target="_blank" href="">Web interactive comparison on Middlebury 2014 data (Coming Soon)</a>
+        </p>
+        
+        <br><br>
+        <hr class="style-two">
+        <p>Last Update: May 2021</p>
+
+    </body>
+</html>
+    

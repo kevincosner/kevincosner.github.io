@@ -1,0 +1,222 @@
+
+<html>
+    <head>
+        <title> Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion - Interactive Comparison </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="js/report.css">
+        
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/image-compare.js"></script>
+        <script src="../../js/jquery.flot.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.axislabels.js" type="text/javascript" language="javascript"></script>
+        <script src="../../js/jquery.flot.dashes.js" type="text/javascript" language="javascript"></script>
+        <script src="js/ImageBox.js"></script>
+
+        <script type="text/javascript">
+            var imageBoxes = [
+                {
+                    "inputColor": "images/Synthetic/Table/Table_Color.png",
+                    "inputDepth": "images/Synthetic/Table/Table_Depth.png",
+                    "elements": [
+                        "images/Synthetic/Table/Table_Result_JBF_15_0.png",
+                        "images/Synthetic/Table/Table_Result_SRF_15_0.png",
+                        "images/Synthetic/Table/Table_Result_MultiResJBU_7_5.png",
+                        "images/Synthetic/Table/Table_Result_FBS.png",
+                        "images/Synthetic/Table/Table_Result_MultiResSRF_7_5.png",
+                        "images/Synthetic/Table/Table_REF.png",
+                    ],
+                    "enableInsets": true,
+                    "insetSize": 150,
+                    "insetZoom": 3,
+                    "insetNum": 6,
+                    "names": [
+                        "JBF",
+                        "SRF",
+                        "M-JBU",
+                        "FBS",
+                        "M-SRF",
+                        "REF",
+                    ],
+                    "title": "Table"
+                }
+            ];
+
+            var curImageBox;
+
+            function SetComparison(scene, type, m1="", m2="", m3="", m4="", m5="", p1="", p2="", p3="", p4="", p5="") {        
+                if (type === "Synthetic") {
+                    // Update table.
+                    var str = document.getElementById("quanCompareStr");
+                    str.style.display = "block";
+                    
+                    var table = document.getElementById("quanCompareTable");
+                    table.style.display = "block";
+                    var tableContent = "<tr><td width=120><b>Method</b></td><td width=120><b>JBF</b></td><td width=120><b>SRF</b></td><td width=120><b>M-JBU</b></td><td width=120><b>FBS</b></td><td width=120><b>M-SRF</b></td></tr>";
+                    tableContent += "<tr><td>MAE</td><td>" + m1 + "</td><td>" + m2 + "</td><td>" + m3 + "</td><td>" + m4 + "</td><td>" + m5 + "</td></tr>";
+                    tableContent += "<tr><td>PSNR</td><td>" + p1 + "</td><td>" + p2 + "</td><td>" + p3 + "</td><td>" + p4 + "</td><td>" + p5 + "</td></tr>";
+                    table.innerHTML = tableContent;
+
+                    imageBoxes[0].insetNum = 6;
+                    imageBoxes[0].names = ["JBF", "SRF", "M-JBU", "FBS", "M-SRF", "REF"];
+                    imageBoxes[0].inputDepth = "images/" + type + "/" + scene + "/" + scene + "_Depth.png";
+                    imageBoxes[0].elements[5] = "images/" + type + "/" + scene + "/" + scene + "_REF.png";
+                }
+                else {
+                    var str = document.getElementById("quanCompareStr");
+                    str.style.display = "none";
+                    var table = document.getElementById("quanCompareTable");
+                    table.style.display = "none";
+
+                    imageBoxes[0].insetNum = 5;
+                    imageBoxes[0].names = ["JBF", "SRF", "M-JBU", "FBS", "M-SRF"];
+                    imageBoxes[0].inputDepth = "images/" + type + "/" + scene + "/" + scene + "_ValidDepth.png";
+                    imageBoxes[0].elements.length = 5;
+                }
+                
+                // Remove and re-create image box.
+                Clear();
+
+                var content = document.getElementById("qualitativeComparison");
+
+                imageBoxes[0].inputColor = "images/" + type + "/" + scene + "/" + scene + "_Color.png";
+                imageBoxes[0].title = scene;
+                imageBoxes[0].elements[0] = "images/" + type + "/" + scene + "/" + scene + "_Result_JBF_15_0.png";
+                imageBoxes[0].elements[1] = "images/" + type + "/" + scene + "/" + scene + "_Result_SRF_15_0.png";
+                imageBoxes[0].elements[2] = "images/" + type + "/" + scene + "/" + scene + "_Result_MultiResJBU_7_5.png";
+                imageBoxes[0].elements[3] = "images/" + type + "/" + scene + "/" + scene + "_Result_FBS.png";
+                imageBoxes[0].elements[4] = "images/" + type + "/" + scene + "/" + scene + "_Result_MultiResSRF_7_5.png";
+                    
+                curImageBox = new ImageBox(content, imageBoxes[0]);
+            }
+
+            function Clear() {
+                // Remove old qualitativeComparison div.
+                var content = document.getElementById("qualitativeComparison");
+                content.remove();
+                // Create new qualitativeComparison div.
+                var qualCompare = document.createElement("div");
+                qualCompare.className = "content";
+                qualCompare.id = "qualitativeComparison";
+                qualCompare.style.width = 800;
+                document.body.appendChild(qualCompare);
+            }
+        </script>
+    </head>
+    
+    <body onload="SetComparison('Table', 'Synthetic', 'N/A', '0.0399', '0.0654', '0.0511', '0.0308', 'N/A', '29.19', '26.02', '29.77', '31.71')">
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Multi-Resolution Shared Representative Filtering for <br> Real-Time Depth Completion</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://people.csail.mit.edu/tzumao/">Tzu-Mao Li</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://jdily.github.io/">I-Chao Shen</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        Hong-Shiang Lin<sup>4</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a></a><sup>1</sup>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.csail.mit.edu/">MIT CSAIL</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.fihmb.com/about/default.aspx">FIH Mobile Limited</a><sup>4</sup>
+        <br>
+        <br>
+    
+        <p><font size=+2><b>Interactive Comparison on Synthetic and Real-World Data</b></font></p>
+        <p>Image viewer is borrowed from <a href="https://cs.dartmouth.edu/~wjarosz/publications/bitterli19selectively.html">this page</a>.</p>
+        <p>All results are generated on a machine with Intel Core i5-7400K at 3.0 GHz, 16-GB of RAM, and an
+           NVIDIA GeForce GTX 2080 Ti graphics card.</p>
+    
+        <p>
+            <font size=+1><b>Synthetic Scenes (click on the thumbnail to select the scene comparison shown at the bottom of the page)</b></font><br>
+            <table>
+                <tr>
+                    <td><center><img class="img-fluid rounded" src="images/Synthetic/Table/Table_Color.png"           width="180" onclick="SetComparison('Table', 'Synthetic', 'N/A', '0.0399', '0.0654', '0.0511', '0.0308', 'N/A', '29.19', '26.02', '29.77', '31.71')" style="cursor: pointer;"></img></center></td>
+                    <td><center><img class="img-fluid rounded" src="images/Synthetic/Buddha/Buddha_Color.png"         width="180" onclick="SetComparison('Buddha', 'Synthetic', 'N/A', '0.0138', '0.0217', '0.0215', '0.0115', 'N/A', '30.23', '26.15', '26.15', '32.17')" style="cursor: pointer;"></img></center></td>
+                    <td><center><img class="img-fluid rounded" src="images/Synthetic/LivingRoom/LivingRoom_Color.png" width="180" onclick="SetComparison('LivingRoom', 'Synthetic', 'N/A', '0.0456', '0.0698', '0.0611', '0.0427', 'N/A', '30.73', '27.97', '30.99', '33.31')" style="cursor: pointer;"></img></center></td>
+                    <td><center><img class="img-fluid rounded" src="images/Synthetic/Outdoor/Outdoor_Color.png"       width="180" onclick="SetComparison('Outdoor', 'Synthetic', 'N/A', '0.0678', '0.1046', '0.0766', '0.0694', 'N/A', '27.63', '25.91', '27.09', '28.01')" style="cursor: pointer;"></img></center></td>
+                </tr>
+                <tr>
+                    <td><center>Table     </center></td>
+                    <td><center>Buddha    </center></td>
+                    <td><center>LivingRoom</center></td>
+                    <td><center>Outdoor   </center></td>
+                </tr>
+            </table>
+        </p>
+        
+        <p>
+            <font size=+1><b>Real-World Scenes (click on the thumbnail to select the scene comparison shown at the bottom of the page)</b></font><br>
+            Captured by Intel RealSense D-435<br>
+            <table>
+                <tr>
+                    <td><center><img class="img-fluid rounded" src="images/RealSense/Puppies/Puppies_Color.png" width="180" onclick="SetComparison('Puppies', 'RealSense')" style="cursor: pointer;"></img></center></td>
+                    <td><center><img class="img-fluid rounded" src="images/RealSense/Man/Man_Color.png"         width="180" onclick="SetComparison('Man', 'RealSense')" style="cursor: pointer;">    </img></center></td>
+                    <td><center><img class="img-fluid rounded" src="images/RealSense/Work/Work_Color.png"       width="180" onclick="SetComparison('Work', 'RealSense')" style="cursor: pointer;">   </img></center></td>
+                    <td><center><img class="img-fluid rounded" src="images/RealSense/Office/Office_Color.png"   width="180" onclick="SetComparison('Office', 'RealSense')" style="cursor: pointer;"> </img></center></td>
+                </tr>
+                <tr>
+                    <td><center>Puppies</center></td>
+                    <td><center>Man    </center></td>
+                    <td><center>Work   </center></td>
+                    <td><center>Office </center></td>
+                </tr>
+            </table>
+        </p>
+
+        <p>
+            <font size=+1><b>Compared Methods</b></font><br>
+            Joint Bilateral Filtering (JBF) [Kopf et al. 2007]<br>
+            Shared Representative Filtering (SRF) [Our method]<br>
+            Multi-Res. Joint Bilateral Upsampling (M-JBU) [Richardt et al. 2012]<br>
+            Fast Bilateral Solver (FBS) [Barron and Poole 2016]<br>
+            Multi-Res. Shared Representative Filtering (M-SRF) [Our method]
+        </p>
+
+        <p>
+            <font size=+1><b>Implementation and Time Budgets</b></font><br>
+            Joint Bilateral Filtering [Kopf et al. 20007], Multi-Res. Joint Bilateral Upsampling [Richardt et al. 2012] and our methods (SRF and M-SRF) are implemented with Unity shaders, running on GPU. 
+            We allocated 15.0 ms. for single-resolution methods (JBF and SRF) and 7.5 ms. for multi-resolution methods (M-JBU and M-SRF) as time budget to complete the depth map.
+            For Fast Bilateral Solver [Barron and Poole 2016], we use the authors' CPU python implementation. It takes about 300 ~ 500 ms. 
+        </p>
+
+        <p>
+            <font id="quanCompareStr" size=+1><b>Mean Absolute Error (MAE) and Peak Signal-to-Noise Ratio (PSNR)</b></font>
+            <table id="quanCompareTable">
+                <tr>
+                    <td width=120><b>Method</b></td>
+                    <td width=120><b>JBF</b></td>
+                    <td width=120><b>SRF</b></td>
+                    <td width=120><b>M-JBU</b></td>
+                    <td width=120><b>FBS</b></td>
+                    <td width=120><b>M-SRF</b></td>
+                </tr>
+                <tr>
+                    <td>MAE</td>
+                    <td>N/A</td>
+                    <td>0.0399</td>
+                    <td>0.0654</td>
+                    <td>0.0511</td>
+                    <td>0.0308</td>
+                </tr>
+                <tr>
+                    <td>PSNR</td>
+                    <td>N/A</td>
+                    <td>29.19</td>
+                    <td>26.02</td>
+                    <td>29.77</td>
+                    <td>31.71</td>
+                </tr>
+            </table>
+        </p>
+
+        <div class="content" id="qualitativeComparison"></div>
+
+        <br><br><br>
+
+    </body>
+</html>
+
+
+    
