@@ -127,11 +127,20 @@
                 </div>
                 <div class="col-md-9">
                     <p><b>Learning to Cluster for Rendering with Many Lights</b> &nbsp <b class="label_cg">CG</b> <b class="label_learning">ML</b> <br>
-                    Yu-Chen Wang, <u>Yu-Ting Wu</u>, Tzu-Mao Li, Yung-Yu Chuang<br>
+                    Yu-Chen Wang, <u>Yu-Ting Wu<b>*</b></u>, Tzu-Mao Li, Yung-Yu Chuang  <b>(*: the corresponding author)</b><br>
                     <i>Accepted to ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2021)</i><br>
                     <span>(a progressive many-light rendering algorithm that can learn to cluster and sample lights)</span><br>
+                    <span style="background-color: #ffffff;color: #1577A4;"><a data-toggle="collapse" data-target="#wang_2021_lcr_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
-                    <br>
+                    <div class="collapse" id="wang_2021_lcr_abstract">
+                        <p>&nbsp&nbsp&nbsp&nbsp We present an unbiased online Monte Carlo method for rendering with many lights. Our method adapts both the hierarchical light clustering and
+                            the sampling distribution to our collected samples. Designing such a method requires us to make clustering decisions under noisy observation, and making
+                            sure that the sampling distribution adapts to our target. Our method is based on two key ideas: a coarse-to-fine clustering scheme that can find good
+                            clustering configurations even with noisy samples, and a discrete stochastic successive approximation method that starts from a prior distribution and
+                            provably converges to a target distribution. We compare to other state-ofthe-art light sampling methods, and show better results both numerically
+                            and visually.
+                        </p>
+                    </div>
                     <a href="" class="btn btn-outline vert-offset-top-1" role="button">Coming Soon</a>
                 </div>
             </div>
@@ -279,7 +288,8 @@
                     <p><b>SURE-based Optimization for Adaptive Sampling and Reconstruction</b> &nbsp <b class="label_cg">CG</b> <br>
                     Tzu-Mao Li, <u>Yu-Ting Wu</u>, Yung-Yu Chuang<br>
                     <i>ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2012), </i>
-                    <span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight paper by the program chair</i></span><br>
+                    <!--<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight paper by the program chair</i></span>-->
+                    <br>
 					<span>(an adaptive sampling and denoising method for Monte Carlo rendering using Stein's unbiased risk estimator)</span><br>
                     <span style="background-color: #ffffff;color: #1577A4;"><a data-toggle="collapse" data-target="#li_2012_sbo_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
@@ -317,10 +327,11 @@
                     <p><b>VisibilityChuck: Average Directional Visibility for Importance Sampling</b> &nbsp <b class="label_cg">CG</b> <br>
                     <u>Yu-Ting Wu</u>, Yung-Yu Chuang<br>
                     <i>ACM SIGGRAPH Asia 2012 Poster, </i>
-					<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight poster by the program chair</i></span><br>
+					<!--<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight poster by the program chair</i></span>-->
+                    <br>
 					<span>(an early version of our VisibilityCluster paper)</span><br>
                     </p>
-                    <!--<br>-->
+                    <br>
                     <a href="publications/Wu2012VC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="https://dl.acm.org/doi/10.1145/2407156.2407205" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Digital Library</a>
                 </div>
