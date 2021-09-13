@@ -13,12 +13,13 @@
         
         <a href="https://bulbaberry.xyz/">Yu-Chen Wang</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
         <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
-        <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a><sup>2,3</sup> &nbsp;&nbsp;&nbsp;
         <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a><sup>1</sup>
     
         <br>
         <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
-        <a href="https://cse.ucsd.edu/">University of California San Diego</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.csail.mit.edu/">MIT CSAIL</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://cse.ucsd.edu/">University of California San Diego</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
         <br>
         <br>
     
@@ -26,9 +27,9 @@
         <div>
             <p>
                 The importance of light clustering. (a) shows an example scene with 16 area lights, including 8 dull white lights on the left and 8 strong yellow
-                lights above the bookshelf. (b) shows the visualization of the lightcuts at an interest point 𝑃. Vévoda et al.’s BORAS method [2018] constructs the cut using
-                heuristics without considering visibility. Thus, it cannot locate the important lights within C1. By contrast, our method starts from a cut consisting of C1 and
-                C2 and progressively refines the nodes in C1 according to the information obtained from online learning. (c) and (d) show the rendered results of Vévoda et
+                lights above the bookshelf. (b) shows the visualization of the lightcuts at an interest point <i>P</i>. Vévoda et al.’s BORAS method [2018] constructs the cut using
+                heuristics without considering visibility. Thus, it cannot locate the important lights within <b>C1</b>. By contrast, our method starts from a cut consisting of <b>C1</b> and
+                <b>C2</b> and progressively refines the nodes in <b>C1</b> according to the information obtained from online learning. (c) and (d) show the rendered results of Vévoda et
                 al.’s method and our method, respectively. The error visualizations are shown at the bottom left corner. (e) shows the reference image. Our method produces
                 an image with much fewer noises than Vévoda et al.’s method because of better adaptive light clustering.
             </p>
@@ -37,16 +38,12 @@
         <hr class="style-two">
         <p>
         <font size=+1><b>Abstract</b></font><br>
-        We present an unbiased online Monte Carlo method for rendering with
-        many lights. Our method adapts both the hierarchical light clustering and
-        the sampling distribution to our collected samples. Designing such a method
-        requires us to make clustering decisions under noisy observation, and making
-        sure that the sampling distribution adapts to our target. Our method is
-        based on two key ideas: a coarse-to-fine clustering scheme that can find good
-        clustering configurations even with noisy samples, and a discrete stochastic
-        successive approximation method that starts from a prior distribution and
-        provably converges to a target distribution. We compare to other state-of-the-art 
-        light sampling methods, and show better results both numerically and visually.
+        We present an unbiased online Monte Carlo method for rendering with many lights. Our method adapts both the hierarchical light clustering and
+        the sampling distribution to our collected samples. Designing such a method requires us to make clustering decisions under noisy observation, and making
+        sure that the sampling distribution adapts to our target. Our method is based on two key ideas: a coarse-to-fine clustering scheme that can find good
+        clustering configurations even with noisy samples, and a discrete stochastic successive approximation method that starts from a prior distribution and
+        provably converges to a target distribution. We compare to other state-of-the-art light sampling methods, and show better results both numerically
+        and visually.
         </p>
         <hr class="style-two">
     
@@ -54,21 +51,22 @@
         <font size=+1><b>Publication</b></font><br>
         Yu-Chen Wang, Yu-Ting Wu, Tzu-Mao Li, Yung-Yu Chuang. <br>
         Learning to Cluster for Rendering with Many Lights. <br>
-        Conditionally accepted to ACM Transactions on Graphics (Proceedings of ACM SIGGRAPH Asia 2021), Tokyo, Japan, December 2021. 
-        <a href="citation.bib">BibTeX</a><br>
+        ACM Transactions on Graphics (Proceedings of ACM SIGGRAPH Asia 2021), volume 40, number 6, article 276, Tokyo, Japan, December 2021. 
+        <a href="">BibTeX (Coming Soon)</a><br>
         <a target="_blank" href="paper.pdf">SIGGRAPH Asia 2021 Paper</a><br>
-        <a target="_blank" href="">Digital library</a>
+        <a target="_blank" href="https://doi.org/10.1145/3478513.3480561">Digital library (Coming Soon)</a>
         </p>
         <hr class="style-two">
 
         <p>
         <font size=+1><b>Supplemental</b></font><br>
+        <a target="_blank" href="supplemental.pdf">SIGGRAPH Asia 2021 supplementary document (0.3MB PDF)</a><br>
         <a target="_blank" href="interactive_compare.html">Web interactive comparison</a>
         </p>
         
         <br><br>
         <hr class="style-two">
-        <p>Last Update: August 2021</p>
+        <p>Last Update: September 2021</p>
     
     </body>
 </html>

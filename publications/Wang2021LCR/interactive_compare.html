@@ -1,0 +1,259 @@
+
+<html>
+    <head>
+        <title> Learning to Cluster for Rendering with Many Lights </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="js/report.css">
+        
+        <link rel="stylesheet" href="js/report.css">
+        <script src="js/ImageBox.js"></script>
+
+        <script type="text/javascript">
+            // 0: result, 1: ablation.
+            var curMode = 0;
+            var curScene = "bathroom";
+
+            var imageBoxes = [
+                {
+                    "elements": [
+                        "images/ResultComparison/bathroom_slc.png",
+                        "images/ResultComparison/bathroom_restir.png",
+                        "images/ResultComparison/bathroom_boras.png",
+                        "images/ResultComparison/bathroom_vaboras.png",
+                        "images/ResultComparison/bathroom_rll.png",
+                        "images/ResultComparison/bathroom_varl.png",
+                        "images/ResultComparison/bathroom_ref.png",
+                    ],
+                    "enableInsets": true,
+                    "insetSize": 120,
+                    "insetZoom": 3,
+                    "insetNum": 7,
+                    "names": [
+                        "SLC",
+                        "RIS",
+                        "BORAS",
+                        "VA-BORAS",
+                        "RLL",
+                        "Ours",
+                        "REF",
+                    ],
+                    "title": "bathroom",
+                    "quantitativeComparison": "images/ResultComparison/bathroom_quantitative_comparison.png"
+                }
+            ];
+        
+            var ablationBoxes = [
+                {
+                    "elements": [
+                        "images/AblationStudy/bathroom_rll.png",
+                        "images/AblationStudy/bathroom_rll_varl.png",
+                        "images/AblationStudy/bathroom_varl_rll.png",
+                        "images/AblationStudy/bathroom_varl.png",
+                        "images/AblationStudy/bathroom_ref.png",
+                    ],
+                    "enableInsets": true,
+                    "insetSize": 120,
+                    "insetZoom": 3,
+                    "insetNum": 5,
+                    "names": [
+                        "RLL/RLL",
+                        "RLL/Ours",
+                        "Ours/RLL",
+                        "Ours/Ours",
+                        "REF",
+                    ],
+                    "title": "bathroom",
+                    "quantitativeComparison": "images/AblationStudy/bathroom_ablation_study.png"
+                }
+            ];
+
+            var imageFiles = ["_slc.png", "_restir.png", "_boras.png", "_vaboras.png", "_rll.png", "_varl.png", "_ref.png"];
+            var ablationFiles = ["_rll.png", "_rll_varl.png", "_varl_rll.png", "_varl.png", "_ref.png"];
+            var resultImageBox;
+            var ablationImageBox;
+
+            function Init() {
+                SetMode(curMode);
+                SetScene(curScene);
+            }
+
+            function SetMode(newMode) {
+                curMode = newMode;
+                if (curMode === 0) {
+                    resultBtn = document.getElementById("resultBtn");
+                    resultBtn.className = "mode_selected";
+                    ablationBtn = document.getElementById("ablationBtn");
+                    ablationBtn.className = "mode_unselected";
+
+                    resultDesp = document.getElementById("resultDesp");
+                    resultDesp.style.display = "block";
+                    ablationDesp = document.getElementById("ablationDesp");
+                    ablationDesp.style.display = "none";
+                }
+                else {
+                    resultBtn = document.getElementById("resultBtn");
+                    resultBtn.className = "mode_unselected";
+                    ablationBtn = document.getElementById("ablationBtn");
+                    ablationBtn.className = "mode_selected";
+
+                    resultDesp = document.getElementById("resultDesp");
+                    resultDesp.style.display = "none";
+                    ablationDesp = document.getElementById("ablationDesp");
+                    ablationDesp.style.display = "block";
+                }
+                UpdateComparison();
+            }
+
+            function SetScene(newScene) {
+                curScene = newScene;
+                UpdateComparison(curScene);
+            }
+
+            function UpdateComparison() {                               
+                // Remove old comparison div.
+                RemoveComparisonDiv();
+
+                if (curMode == 0) {
+                    var resultCompare = document.createElement("div");
+                    resultCompare.className = "content";
+                    resultCompare.id = "resultComparison";
+                    resultCompare.style.width = 800;
+                    document.body.appendChild(resultCompare);
+
+                    imageBoxes[0].title = curScene;
+                    for (var i = 0; i < imageFiles.length; ++i) 
+                        imageBoxes[0].elements[i] = "images/ResultComparison/" + curScene + "/" + curScene + imageFiles[i];
+                    imageBoxes[0].quantitativeComparison = "images/ResultComparison/" + curScene + "/" + curScene + "_quantitative_comparison.png";
+                    resultImageBox = new ImageBox(resultCompare, imageBoxes[0]);
+                }
+                else {
+                    var ablationCompare = document.createElement("div");
+                    ablationCompare.className = "content";
+                    ablationCompare.id = "ablationComparison";
+                    ablationCompare.style.width = 800;
+                    document.body.appendChild(ablationCompare);
+
+                    ablationBoxes[0].title = curScene;
+                    for (var i = 0; i < ablationFiles.length; ++i) 
+                        ablationBoxes[0].elements[i] = "images/AblationStudy/" + curScene + "/" + curScene + ablationFiles[i];
+                    ablationBoxes[0].quantitativeComparison = "images/AblationStudy/" + curScene + "/" + curScene + "_ablation_study.png";
+                    ablationImageBox = new ImageBox(ablationCompare, ablationBoxes[0]);
+                }
+            }
+
+            function RemoveComparisonDiv() {
+                // Remove old divs.
+                var prevResultCompare = document.getElementById("resultComparison");
+                if (prevResultCompare) {
+                    prevResultCompare.remove();
+                }
+                var prevAblationCompare = document.getElementById("ablationComparison");
+                if (prevAblationCompare) {
+                    prevAblationCompare.remove();
+                }
+            }
+        </script>
+
+    </head>
+    
+    <body onload="Init()">
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Learning to Cluster for Rendering with Many Lights</h3>
+        
+        <a href="https://bulbaberry.xyz/">Yu-Chen Wang</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://cseweb.ucsd.edu/~tzli/">Tzu-Mao Li</a><sup>2,3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a><sup>1</sup>
+    
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.csail.mit.edu/">MIT CSAIL</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://cse.ucsd.edu/">University of California San Diego</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <br>
+        <br>
+
+
+        <p>
+            All results are generated on a machine with 8-core Intel Core i7-9700 CPU (using 4 cores) and 32GB RAM.<br>
+            Image viewer is borrowed from <a href="https://cs.dartmouth.edu/~wjarosz/publications/bitterli19selectively.html">this page</a>.
+        </p>
+
+        <p>
+        <font size=+1><b>Scene (click on the thumbnail to select the scene comparison shown at the bottom of the page)</b></font>
+        <br>
+        <table>
+            <tr>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/bathroom/bathroom_ref.png" width="160" onclick="SetScene('bathroom')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/bedroom/bedroom_ref.png" width="160" onclick="SetScene('bedroom')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/classroom/classroom_ref.png" width="160" onclick="SetScene('classroom')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/kitchen/kitchen_ref.png" width="160" onclick="SetScene('kitchen')" style="cursor: pointer;"></img></center></td>
+            </tr>
+            <tr>
+                <td width="180"><center>Bathroom<br>(120 sec.)</center></td>
+                <td width="180"><center>Bedroom<br>(120 sec.)</center></td>
+                <td width="180"><center>Classroom<br>(120 sec.)</center></td>
+                <td width="180"><center>Kitchen with VPL.<br>(120 sec.)</center></td>
+                
+            </tr>
+            <tr>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/living-room/living-room_ref.png" width="160" onclick="SetScene('living-room')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/parking-lot/parking-lot_ref.png" width="160" onclick="SetScene('parking-lot')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/sanmiguel/sanmiguel_ref.png" width="180" onclick="SetScene('sanmiguel')" style="cursor: pointer;"></img></center></td>
+            </tr>
+            <tr>
+                <td width="180"><center>Living-room<br>(60 sec.)</center></td>
+                <td width="180"><center>Parking-lot<br>(360 sec.)</center></td>
+                <td width="180"><center>Sanmiguel with VPL.<br>(480 sec.)</center></td>
+            </tr>
+            <tr>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/SiA-shelf/SiA-shelf_ref.png" width="120" onclick="SetScene('SiA-shelf')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/staircase/staircase_ref.png" width="100" onclick="SetScene('staircase')" style="cursor: pointer;"></img></center></td>
+                <td width="180"><center><img class="img-fluid rounded" src="images/ResultComparison/staircase2/staircase2_ref.png" width="140" onclick="SetScene('staircase2')" style="cursor: pointer;"></img></center></td>
+            </tr>
+            <tr>
+                <td width="180"><center>SiA-shelf<br>(30 sec.)</center></td>
+                <td width="180"><center>Staircase<br>(30 sec.)</center></td>
+                <td width="180"><center>Staircase2<br>(60 sec.)</center></td>
+            </tr>
+        </table>
+        </p>
+        
+        <p><font size=+1><b>Please select mode:</b></font></p>
+        <font id = "resultBtn" class="mode_unselected" role="button" onclick="SetMode(0)"><b>Result Comparison</b></font> &nbsp&nbsp&nbsp&nbsp&nbsp
+        <font id = "ablationBtn" class="mode_unselected" role="button" onclick="SetMode(1)"><b>Ablation Study</b></font>
+        <br><br>
+
+        <div id="resultDesp">
+        <font size=+1><b><i>Compared methods:<br></i></b></font>
+        <i>Stochastic Lightcuts (SLC)</i> [Cem Yuksel 2019]<br>
+        <i>Resampled Importance Sampling (RIS)</i> [Talbot et al. 2005, Bitterli et al. 2020]<br>
+        <i>Bayesian Online Regression for Adaptive Direct Illumination Sampling (BORAS)</i> [Vevoda et al. 2018]<br>
+        <i>Variance-aware BORAS (VA-BORAS)</i> [Rath et al. 2020, Vevoda et al. 2018]<br>
+        <i>Importance Sampling of Many Lights with Reinforcement Lightcuts Learning (RLL)</i> [Pantaleoni 2019]
+        </div>
+        
+        <div id="ablationDesp" style="display: none;">
+            <font size=+1><b><i>Ablation Study:<br></i></b></font>
+            <font size=+1>
+                We compare different combinations of the clustering update rule and the action values update rule 
+                in <i>reinforcement lightcuts learning (RLL)</i> [Pantaleoni2019] and our method:.
+                <br>
+            </font>
+            <i>RLL/RLL:  </i> Use both RLL's clustering update rule and action values update rule<br>
+            <i>RLL/Ours: </i> Use RLL's clustering update rule and our action values update rule<br>
+            <i>Ours/RLL: </i> Use our clustering update rule and RLL's action values update rule<br>
+            <i>Ours/Ours:</i> Use both our clustering update rule and action values update rule<br>
+        </div>
+        
+        <div class="content" id="resultComparison"></div>
+        <div class="content" id="ablationComparison"></div>
+        
+        <br>
+
+    </body>
+</html>
+
+
+    
