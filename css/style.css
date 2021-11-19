@@ -2358,25 +2358,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.label_rendering {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 0.25rem 0.5rem;
-  font-size: 1rem;
-  line-height: 1.0;
-  border-radius: 0.25rem;
-  background-color: #007bff;
-  color: #fdfdfe;
-}
-
 .label_cg {
   display: inline-block;
   font-weight: 400;
@@ -2394,6 +2375,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: 0.25rem;
   background-color: #ff0000;
   color: #fdfdfe;
+  width: 40px;
 }
 
 .label_cv {
@@ -2411,8 +2393,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
-  background-color: #2bff008f;
+  background-color: #2bbb0e8f;
   color: #fdfdfe;
+  width: 40px;
 }
 
 .label_learning {
@@ -2430,11 +2413,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
-  background-color: #ffd900;
-  color: #16151554;
+  background-color: #dabb0f;
+  color: #fdfdfe;
+  width: 40px;
 }
 
-.label_ip {
+.label_im {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -2451,6 +2435,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: 0.25rem;
   background-color: #d400ffde;
   color: #fdfdfe;
+  width: 40px;
 }
 
 .label_vr {
@@ -2468,8 +2453,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
-  background-color: #10a0ffde;
+  background-color: #1034ffde;
   color: #fdfdfe;
+  width: 40px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
