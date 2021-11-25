@@ -2369,7 +2369,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.25rem 0.5rem;
+  padding: 0.05rem 0.15rem 0.25rem 0.15rem;
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
@@ -2389,7 +2389,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.25rem 0.5rem;
+  padding: 0.05rem 0.15rem 0.25rem 0.15rem;
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
@@ -2409,7 +2409,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.25rem 0.5rem;
+  padding: 0.05rem 0.15rem 0.25rem 0.15rem;
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
@@ -2429,7 +2429,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.25rem 0.5rem;
+  padding: 0.05rem 0.15rem 0.25rem 0.15rem;
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
@@ -2449,7 +2449,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.25rem 0.5rem;
+  padding: 0.05rem 0.15rem 0.25rem 0.15rem;
   font-size: 1rem;
   line-height: 1.0;
   border-radius: 0.25rem;
@@ -9186,4 +9186,6 @@ a.anchor {
   border-radius: 0.5em;
   background-color: #F1F1F1;
   color: #4e555b;
+  border:#dae0e5;
+  border-style: solid;
 }
