@@ -9197,5 +9197,9 @@ a.anchor {
   border-radius: 0.25em;
   background-color: #F1F1F1;
   color: #4e555b;
-  
+}
+
+.publication-list-li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
 }
