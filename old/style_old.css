@@ -554,7 +554,7 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: 30px;
+  margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -4095,7 +4095,7 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.05rem 0.05rem;
+  padding: 0.5rem 1rem;
 }
 
 .navbar > .container,
@@ -9188,14 +9188,4 @@ a.anchor {
   color: #4e555b;
   border:#dae0e5;
   border-style: solid;
-}
-
-.publication-list {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 0.25rem 0.25rem 0.5rem 1.5rem;
-  border-radius: 0.25em;
-  background-color: #F1F1F1;
-  color: #4e555b;
-  
 }

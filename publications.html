@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Yu-Ting Wu</title>
+        <link rel="icon" href="images/icon.png">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/lightbox2/dist/css/lightbox.min.css">
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: #17a2b8;">
+            <div class="container">
+                <table>
+                    <tr>
+                        <td><a class="nav-link" href="index.html" style="color: #fff;">Home</a></td>
+                        <!--<td><a class="nav-link" href="projects.html" style="color: #fff;">Projects</a></td>-->
+                        <td><a class="nav-link" href="publications.html" style="color: #fff;">Publications</a></td>
+                        <td><a class="nav-link" href="misc.html" style="color: #fff;">Misc</a></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container mt-4">
+            <a class="anchor" name="publications"></a>
+            <h3 class="my-3">Selected Publications</h3>
+            <p><font size="+1"><a href="full_publication_list.html" target= "_blank">view full publication and patent list</a></font></p>
+            <!--
+            <table>
+                <tr>
+                    <td width="70"><b>Label:</b></td>
+                    <td width="200"><b class="label_cg">CG</b> <i>Computer Graphics</i></td>
+                    <td width="200"><b class="label_cv">CV</b> <i>Computer Vision</i></td>
+                    <td width="200"><b class="label_im">IM</b> <i>Image Enhancement</i></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td width="200"><b class="label_vr">XR</b> <i>Extended Reality</i></td>
+                    <td width="200"><b class="label_learning">AI</b> <i>Artificial Intelligence</i></td>
+                </tr>
+            </table>
+            -->
+            
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2021</i></b></p>
+            <hr class="style-two">
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="publications/Shen2021SIS/thumb.png" data-lightbox="example-Shen2021SIS" 
+                       data-title="StylePart: Image-based Shape Part Manipulation">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Shen2021SIS/thumb.png" alt="StylePart: Image-based Shape Part Manipulation"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>StylePart: Image-based Shape Part Manipulation</b> &nbsp <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_learning">AI</b> <br>
+                    I-Chao Shen, Li-Wen Su, <u>Yu-Ting Wu</u>, Bing-Yu Chen<br>
+                    <i>arXiv 2021</i><br>
+                    <span>(a shape-consistent latent mapping function that connects the latent space of image and 3D shape attributes)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2021_sis_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+                    <div class="collapse" id="shen_2021_sis_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Due to a lack of image-based <i>"part controllers"</i>, shape manipulation of man-made shape images, such as 
+                            resizing the backrest of a chair or replacing a cup handle is not intuitive because of the lack of image-based part 
+                            controllers. To tackle this problem, we present <b><i>StylePart</i></b>, a framework that enables direct shape manipulation of an image 
+                            by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping 
+                            function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method 
+                            <i>"forwardly maps"</i> the image content to its corresponding 3D shape attributes, where the shape part can be easily 
+                            manipulated. The attribute codes of the manipulated 3D shape are then <i>"backwardly mapped"</i> to the image latent code to 
+                            obtain the final manipulated image. We demonstrate our approach through various manipulation tasks, including part 
+                            replacement, part resizing, and viewpoint manipulation, and evaluate its effectiveness through extensive ablation studies.
+                        </p>
+                    </div>
+                    <a href="https://arxiv.org/abs/2111.10520" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">arXiv</a>
+                    <!--
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Paper (Coming Soon)</a>
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">BibTex (Coming Soon)</a>
+                    -->
+                </div>
+            </div>
+            <br>
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="publications/Wang2021LCR/thumb.gif" data-lightbox="example-Wang2021LCR" 
+                       data-title="Learning to Cluster for Rendering with Many Lights">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wang2021LCR/thumb.png" alt="Learning to Cluster for Rendering with Many Lights"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>Learning to Cluster for Rendering with Many Lights</b> &nbsp <b class="label_cg">CG</b> <b class="label_learning">AI</b> <br>
+                    Yu-Chen Wang, <u>Yu-Ting Wu<b>*</b></u>, Tzu-Mao Li, Yung-Yu Chuang  <b>(*: the corresponding author)</b><br>
+                    <i>ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2021), to appear</i><br>
+                    <span>(a progressive many-light rendering algorithm that can learn to cluster and sample lights)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wang_2021_lcr_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+                    <div class="collapse" id="wang_2021_lcr_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present an unbiased online Monte Carlo method for rendering with many lights. Our method adapts both the hierarchical light clustering and
+                            the sampling distribution to our collected samples. Designing such a method requires us to make clustering decisions under noisy observation, and making
+                            sure that the sampling distribution adapts to our target. Our method is based on two key ideas: a coarse-to-fine clustering scheme that can find good
+                            clustering configurations even with noisy samples, and a discrete stochastic successive approximation method that starts from a prior distribution and
+                            provably converges to a target distribution. We compare to other state-of-the-art light sampling methods, and show better results both numerically
+                            and visually.
+                        </p>
+                    </div>
+                    <a href="publications/Wang2021LCR/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Wang2021LCR/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="publications/Wang2021LCR/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+		        </div>
+            </div>
+            <br>
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="publications/Wu2021MSR/thumb.gif" data-lightbox="example-Wu2021MSR" 
+                       data-title="Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wu2021MSR/thumb.png" alt="Multi-Resolution Shared Representative Filtering"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion</b> &nbsp <b class="label_cg">CG</b> <b class="label_cv">CV</b> <b class="label_im">IM</b> <br>
+                    <u>Yu-Ting Wu</u>, Tzu-Mao Li, I-Chao Shen, Hong-Shiang Lin, Yung-Yu Chuang<br>
+                    <i>High-Performance Graphics 2021</i><br>
+                    <span>(a real-time depth completion algorithm for effectively handling large missing regions of depth maps)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2021_msr_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+					<div class="collapse" id="wu_2021_msr_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present shared representative filtering for real-time high-resolution depth completion with RGB-D sensors. Conventional
+                            filtering-based methods face a dilemma when the missing regions of the depth map are large. When the filter window is small, the filter fails 
+                            to include enough samples. On the other hand, when the window is large, the method could oversmooth depth boundaries due to the error introduced 
+                            by the extra samples. Our method adapts the filter kernels to the shape of the missing regions to collect a sufficient number of samples while 
+                            avoiding oversmoothing. We collect depth samples by searching for a small set of similar pixels, which we call the representatives, using an 
+                            efficient line search algorithm. We then combine the representatives using a joint bilateral weight. Experiments show that our method can filter 
+                            a high-resolution depth map within a few milliseconds while outperforming previous filtering-based methods on both real-world and synthetic data 
+                            in terms of both efficiency and accuracy, especially when dealing with large missing regions in depth maps.
+                        </p>
+                    </div>
+                    <a href="publications/Wu2021MSR/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Wu2021MSR/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <!--<a href="publications/Wu2021MSR/slides.pptx" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Slides</a>-->
+                    <a href="publications/Wu2021MSR/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://diglib.eg.org/handle/10.2312/hpg20211280" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                </div>
+            </div>
+            <br>
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <!--<img src="publications/Shen2021CMC/thumb.png" class="img-thumbnail center-block" style="max-width:100%">-->
+                    <a class="example-image-link" href="publications/Shen2021CMC/thumb.png" data-lightbox="example-Shen2021CMC" 
+                       data-title="Multi-view Clipart Design">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Shen2021CMC/thumb.png" alt="Multi-view Clipart Design"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>ClipFlip: Multi-view Clipart Design</b> &nbsp <b class="label_cg">CG</b> <b class="label_cv">CV</b> <b class="label_learning">AI</b> <br>
+                    I-Chao Shen, Kuan-Hung Liu, Li-Wen Su, <u>Yu-Ting Wu</u>, Bing-Yu Chen<br>
+                    <i>Computer Graphics Forum, February 2021</i><br>
+                    <span>(an assistive system for clipart design by providing visual scaffolds from the unseen view points)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2020_cmc_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+					<div class="collapse" id="shen_2020_cmc_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present an assistive system for clipart design by providing visual scaffolds from the unseen viewpoints. Inspired by the artists’
+                            creation process, our system constructs the visual scaffold by first synthesizing the reference 3D shape of the input clipart and rendering it from the 
+                            desired viewpoint. The critical challenge of constructing this visual scaffold is to generate a reference 3D shape that matches the user’s expectations 
+                            in terms of object sizing and positioning while preserving the geometric style of the input clipart. To address this challenge, we propose a user-assisted 
+                            curve extrusion method to obtain the reference 3D shape. We render the synthesized reference 3D shape with a consistent style into the visual scaffold. 
+                            By following the generated visual scaffold, the users can efficiently design clipart with their desired viewpoints. The user study conducted by an intuitive
+                            user interface and our generated visual scaffold suggests that our system is especially useful for estimating the ratio and scale between object parts and 
+                            can save on average 57% of drawing time.
+                        </p>
+                    </div>
+                    <a href="publications/Shen2021CMC/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Shen2021CMC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="https://arxiv.org/abs/2008.12933" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">arXiv</a>
+                    <a href="publications/Shen2021CMC/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14190" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                </div>
+            </div>
+            <br>
+            
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2015</i></b></p>
+            <hr class="style-two">
+            
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <!--<img src="publications/Wu2015DMS/thumb.jpg" class="img-thumbnail center-block" style="max-width:100%">-->
+                    <a class="example-image-link" href="publications/Wu2015DMS/dms.gif" data-lightbox="example-Wu2015DMS" 
+                       data-title="Dual-Matrix Sampling for Scalable Translucent Material Rendering, IEEE Transactions on Visualization and Computer Graphics, 2015">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wu2015DMS/thumb.jpg" alt="Dual-Matrix Sampling"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>Dual-Matrix Sampling for Scalable Translucent Material Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
+                    <u>Yu-Ting Wu</u>, Tzu-Mao Li, Yu-Hsun Lin, Yung-Yu Chuang<br>
+                    <i>IEEE Transactions on Visualization and Computer Graphics, March 2015</i><br>
+                    <span>(a scalable algorithm for rendering plenty of translucent objects under complex illumination)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2015_dms_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+					<div class="collapse" id="wu_2015_dms_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper introduces a scalable algorithm for rendering translucent materials with complex lighting. We represent the light transport 
+                           with a diffusion approximation by a dual-matrix representation with the <i>Light-to-Surface</i> and <i>Surface-to-Camera</i> matrices. By exploiting the structures within 
+                           the matrices, the proposed method can locate surface samples with little contribution by using only subsampled matrices and avoid wasting computation on these 
+                           samples. The decoupled estimation of irradiance and diffuse BSSRDFs also allows us to have a tight error bound, making the adaptive diffusion approximation 
+                           more efficient and accurate. Experiments show that our method outperforms previous methods for translucent material rendering, especially in large scenes with 
+						   massive translucent surfaces shaded by complex illumination.
+                        </p>
+                    </div>
+                    <a href="publications/Wu2015DMS/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Wu2015DMS/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="publications/Wu2015DMS/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://ieeexplore.ieee.org/document/6994841" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                </div>
+            </div>
+            
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2014</i></b></p>
+            <hr class="style-two">
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <!--<img src="publications/dissertation/thumb.jpg" class="img-thumbnail center-block" style="max-width:100%">-->
+                    <a class="example-image-link" href="publications/dissertation/thumb.png" data-lightbox="example-dissertation" 
+                       data-title="Sampling and Reconstruction Techniques for Efficient Monte Carlo Rendering, Ph.D. Dissertation, National Taiwan University 2014">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/dissertation/thumb.png" alt="Ph.D. Dissertation"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>Sampling and Reconstruction Techniques for Efficient Monte Carlo Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
+                    <u>Yu-Ting Wu</u>, advised by Yung-Yu Chuang<br>
+                    <i>Doctor of Philosophy in Computer Science and Information Engineering, National Taiwan University, June 2014</i></br>
+                    <span>(a coherent view of my Ph.D. research with background reviews)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2014_dissertation_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+					<div class="collapse" id="wu_2014_dissertation_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Two of the most important tasks that computer graphics techniques try to solve is rendering photo-realistic images and performing 
+                           numerically accurate simulation. Physically-based rendering can naturally satisfy these two goals. It is usually simulated by the Monte Carlo ray tracing 
+                           for handling a variety of sophisticated light transport paths in a united manner. Despite its generality and simplicity, however, Monte Carlo integration 
+                           converges slowly. Rendering scenes with lots of complex geometry and realistic materials under complex illumination usually requires a large number of 
+                           samples to produce a noise-free image. <br>
+                           &nbsp&nbsp&nbsp&nbsp In this dissertation, we proposed three advanced sampling and reconstruction algorithms for improving the performance of Monte Carlo 
+                           integration. First, realizing that in complex scenes visibility is usually the major source of noise during sampling the shading function, we developed a 
+                           method called <b><i>VisibilityCluster</i></b> for efficiently approximating visibility function. By integrating it into importance sampling framework, we achieve 
+                           superior noise reduction compared to previous approaches. Second, to reduce the computation overhead of rendering translucent materials, we proposed an 
+                           algorithm, <b><i>Dualmatrix sampling</i></b>, to avoid evaluating unimportant surface samples which contribute little to the final image. Finally, a general adaptive 
+                           sampling and reconstruction framework named <b><i>SURE-based optimization</i></b> is proposed to render a wide range of distributed effects, including depth of field, 
+                           motion blur, and global illumination. All of the three methods achieve significant performance improvement compared to the state-of-the-art rendering 
+                           algorithms.
+                        </p>
+                    </div>
+                    </p>
+                    <a href="publications/dissertation/dissertation.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Dissertation</a>
+                    <!--<a href="publications/dissertation/slides.pptx" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Slides</a>-->
+                </div>
+            </div>
+
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2013</i></b></p>
+            <hr class="style-two">
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <!--<img src="publications/Wu2013VC/thumb.jpg" class="img-thumbnail center-block" style="max-width:100%">-->
+                    <a class="example-image-link" href="publications/Wu2013VC/vc2013.gif" data-lightbox="example-Wu2013VC" 
+                       data-title="VisibilityCluster: Average Directional Visibility for Many-Light Rendering, IEEE Transactions on Visualization and Computer Graphics, 2013">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wu2013VC/thumb.jpg" alt="VisibilityCluster"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>VisibilityCluster: Average Directional Visibility for Many-Light Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
+                    <u>Yu-Ting Wu</u>, Yung-Yu Chuang<br>
+                    <i>IEEE Transactions on Visualization and Computer Graphics, September 2013</i><br>
+                    <span>(a method for efficient computation and compact representation of the visibility function for many-light rendering)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2013_vc_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+					<div class="collapse" id="wu_2013_vc_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper proposes the <b><i>VisibilityCluster</i></b> algorithm for efficient visibility approximation and representation in many-light rendering. 
+                           By carefully clustering lights and shading points, we can construct a visibility matrix that exhibits good local structures due to visibility coherence of 
+                           nearby lights and shading points. Average visibility can be efficiently estimated by exploiting the sparse structure of the matrix and shooting only few 
+                           shadow rays between clusters. Moreover, we can use the estimated average visibility as a quality measure for visibility estimation, enabling us to locally 
+                           refine VisibilityClusters with large visibility variance for improving accuracy. We demonstrate that, with the proposed method, visibility can be incorporated 
+                           into importance sampling at a reasonable cost for the manylight problem, significantly reducing variance in Monte Carlo rendering. In addition, the proposed 
+						   method can be used to increase realism of local shading by adding directional occlusion effects. Experiments show that the proposed technique outperforms 
+						   state-ofthe-art importance sampling algorithms, and successfully enhances the preview quality for lighting design.
+                        </p>
+                    </div>
+                    <a href="publications/Wu2013VC/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Wu2013VC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="publications/Wu2013VC/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://ieeexplore.ieee.org/document/6464264" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                </div>
+            </div>
+            
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2012</i></b></p>
+            <hr class="style-two">
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <!--<img src="publications/Li2012SBO/thumb.png" class="img-thumbnail center-block" style="max-width:100%">-->
+                    <a class="example-image-link" href="publications/Li2012SBO/thumb.png" data-lightbox="example-Li2012SBO" 
+                       data-title="SURE-based Optimization for Adaptive Sampling and Reconstruction, ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2012)">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Li2012SBO/thumb.png" alt="SURE-based Optimization"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>SURE-based Optimization for Adaptive Sampling and Reconstruction</b> &nbsp <b class="label_cg">CG</b> <br>
+                    Tzu-Mao Li, <u>Yu-Ting Wu</u>, Yung-Yu Chuang<br>
+                    <i>ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2012), </i>
+                    <!--<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight paper by the program chair</i></span>-->
+                    <br>
+					<span>(an adaptive sampling and denoising method for Monte Carlo rendering using Stein's unbiased risk estimator)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#li_2012_sbo_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+					<div class="collapse" id="li_2012_sbo_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We apply <b><i>Stein’s Unbiased Risk Estimator (SURE)</i></b> to adaptive sampling and reconstruction to reduce noise in Monte Carlo rendering. 
+                           SURE is a general unbiased estimator for mean squared error (MSE) in statistics. With SURE, we are able to estimate error for an arbitrary reconstruction 
+                           kernel, enabling us to use more effective kernels rather than being restricted to the symmetric ones used in previous work. It also allows us to allocate 
+                           more samples to areas with higher estimated MSE. Adaptive sampling and reconstruction can therefore be processed within an optimization framework. We also 
+                           propose an efficient and memory-friendly approach to reduce the impact of noisy geometry features where there is depth of field or motion blur. Experiments 
+                           show that our method produces images with less noise and crisper details than previous methods.
+                        </p>
+                    </div>
+                    <a href="publications/Li2012SBO/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Li2012SBO/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <!--<a href="publications/Li2012SBO/slides.pptx" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Slides</a>-->
+					<a href="publications/Li2012SBO/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://dl.acm.org/doi/10.1145/2366145.2366213" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                </div>
+            </div>
+            <br>
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <!--<img src="publications/Wu2012VC/thumb.jpg" class="img-thumbnail center-block" style="max-width:100%">-->
+                    <a class="example-image-link" href="publications/Wu2012VC/vc2012.gif" data-lightbox="example-Wu2012VC" 
+                       data-title="VisibilityChunk: Average Directional Visibility for Importance Sampling, ACM SIGGRAPH Asia 2012 Poster">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wu2012VC/thumb.jpg" alt="VisibilityChunk"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>VisibilityChuck: Average Directional Visibility for Importance Sampling</b> &nbsp <b class="label_cg">CG</b> <br>
+                    <u>Yu-Ting Wu</u>, Yung-Yu Chuang<br>
+                    <i>ACM SIGGRAPH Asia 2012 Poster, </i>
+					<!--<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight poster by the program chair</i></span>-->
+                    <br>
+					<span>(an early version of our VisibilityCluster paper)</span><br>
+                    </p>
+                    <br>
+                    <a href="publications/Wu2012VC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="https://dl.acm.org/doi/10.1145/2407156.2407205" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                </div>
+            </div>
+
+            <!--
+            <a class="anchor" name="patents"></a>
+            <hr class="style-two">
+            <h3 class="my-3">Patents</h3>
+            <p>
+                <b>Electronic device, method for displaying an augmented reality scene and non-transitory computer-readable medium</b> &nbsp <b class="label_cg">CG</b> <b class="label_vr">XR</b> <b class="label_cv">CV</b> <br>
+                <u>Yu-Ting Wu</u>, Ching-Yang Chen<br>
+                ROC Patent No: I711966. December 01, 2020<br>
+                US  Patent No: 10636200, April 28, 2020
+            </p>            
+            
+            <p>
+                <b>Virtual reality device, image processing method, and non-transitory computer-readable medium</b> &nbsp <b class="label_cg">CG</b> <b class="label_vr">XR</b> <br>
+                <u>Yu-Ting Wu</u>, Chun-Wen Cheng, Ching-Yang Chen<br>
+                ROC Patent No: I684163, February 01, 2020
+            </p> 
+
+            <p>
+                <b>Three-dimensional modeling method and electronic apparatus thereof</b> &nbsp <b class="label_cg">CG</b> <b class="label_cv">CV</b> <br>
+                Sheng-Jie Luo, Liang-Kang Huang, <u>Yu-Ting Wu</u>, Tung-Peng Wu<br>
+                US  Patent No: 10152827, December 11, 2018
+            </p>
+            -->
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="css/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+
+    </body>
+
+</html>
