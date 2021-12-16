@@ -9203,3 +9203,26 @@ a.anchor {
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
 }
+
+.projects {
+  margin-top: -0.8rem;
+  margin-bottom: 0.2rem;
+  padding: 0.25rem 0.25rem 0.5rem 1.5rem;
+  border-radius: 0.25em;
+  background-color: #F1F1F1;
+  color: #4e555b;
+}
+
+.course {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.25rem 0.5rem 1.5rem;
+  border-radius: 0.25em;
+  background-color: #F1F1F1;
+  color: #4e555b;
+}
+
+.course-li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
