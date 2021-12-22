@@ -28,87 +28,208 @@
         <!-- Page Content -->
         <div class="container mt-4">
             <h3 class="my-3">Projects</h3>
-                <div>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 195px;" src="projects/pbr/kitchen.png"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 195px;" src="projects/pbr/teapot.png"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 195px;" src="projects/pbr/construction.jpg"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 195px;" src="projects/pbr/exhibition.jpg"/>
-                    <p><font size="+1"><b>Physically-based Rendering</b></font></p>
-                    <p style="margin-top: -0.8em;"><b>Related works: </b></p>
-                    <ul style="margin-top: -0.8em; margin-bottom: 0.5em;">
-                        <li>
-                            <a href="publications/Wang2021LCR/index.html" target="_blank">Learning to Cluster for Rendering with Many Lights</a>,
-                            <i>ACM SIGGRAPH Asia 2021</i>
-                        </li>
-                        <li>
-                            <a href="publications/Wu2015DMS/index.html" target="_blank">Dual-Matrix Sampling for Scalable Translucent Material Rendering</a>,
-                            <i>IEEE TVCG 2015</i>
-                        </li>
-                        <li>
-                            <a href="publications/Wu2013VC/index.html" target="_blank">VisibilityCluster: Average Directional Visibility for Many-Light Rendering</a>,
-                            <i>IEEE TVCG 2013</i>
-                        </li>
-                        <li>
-                            <a href="publications/Li2012SBO/index.html" target="_blank">SURE-based Optimization for Adaptive Sampling and Reconstruction</a>,
-                            <i>ACM SIGGRAPH Asia 2012</i>
-                        </li>
-                    </ul> 
+            
+            <div class="row vert-offset-top-1 vert-offset-bottom-1" style="max-width: 100%;">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="projects/importance_sampling.png" data-lightbox="example_importance_sampling" 
+                       data-title="Importance Sampling for Many-Light Rendering">
+                       <img class="img-thumbnail center-block" src="projects/importance_sampling.png" alt="Importance Sampling"/>
+                    </a>
                 </div>
+                <div class="col-md-9">
+                    <p><font size="+1"><b>Importance Sampling for Many-Light Rendering</b></font> &nbsp <b class="label_cg">CG</b> <b class="label_learning">AI</b> <br>                    
+                        Importance sampling is a popular variance reduction technique for Monte Carlo ray tracing. However, 
+                        rendering with a large number of light sources brings up challenges for importance sampling, since 
+                        the sampling needs to take the geometry, visibility, light intensity, and material properties into
+                        consideration. We have proposed three importance sampling algorithms to improve the efficiency of 
+                        rendering, especially for scenes with many light sources.
+                        <br>
+                        <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#importance_sampling" aria-expanded="false">show / hide related works ...</a></span>
+                        <div class="collapse" id="importance_sampling">
+                            <ul class="publication-list" style="margin-top: -0.8em;">
+                                <li>
+                                    <a href="publications/Wang2021LCR/index.html" target="_blank">Learning to Cluster for Rendering with Many Lights</a>,
+                                    <i>ACM SIGGRAPH Asia 2021</i>
+                                </li>
+                                <li>
+                                    <a href="publications/Wu2015DMS/index.html" target="_blank">Dual-Matrix Sampling for Scalable Translucent Material Rendering</a>,
+                                    <i>IEEE TVCG 2015</i>
+                                </li>
+                                <li>
+                                    <a href="publications/Wu2013VC/index.html" target="_blank">VisibilityCluster: Average Directional Visibility for Many-Light Rendering</a>,
+                                    <i>IEEE TVCG 2013</i>
+                                </li>
+                            </ul>
+                        </div>     
+                    </p>
+                </div>
+            </div>
+            <br>
+            
+            <div class="row vert-offset-top-1 vert-offset-bottom-1" style="max-width: 100%;">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="projects/adaptive_sampling_filtering_full.png" data-lightbox="example_adaptive_sampling_filtering" 
+                       data-title="Adaptive Sampling and Filtering for Monte Carlo Ray Tracing">
+                       <img class="img-thumbnail center-block" src="projects/adaptive_sampling_filtering.png" alt="Adaptive Sampling and Filtering"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><font size="+1"><b>Adaptive Sampling and Filtering for Monte Carlo Ray Tracing</b></font> &nbsp <b class="label_cg">CG</b> <br>                    
+                        Monte Carlo (MC) integration is a mainstream technique for rendering images with distributed effects such as 
+                        antialiasing, depth of field, motion blur, and global illumination. It simulates a variety of sophisticated 
+                        light transport paths in a unified fashion: using stochastic point samples in the integral domain. Despite 
+                        its simplicity and generality; however, MC integration converges slowly and suffers from noises due to sampling 
+                        variance. We have proposed a method that can determine the sampling density and per-pixel filter for reducing image 
+                        noise.
+                        <br>
+                        <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#adaptive_sampling_filtering" aria-expanded="false">show / hide related works ...</a></span>
+                        <div class="collapse" id="adaptive_sampling_filtering">
+                            <ul class="publication-list" style="margin-top: -0.8em;">
+                                <li>
+                                    <a href="publications/Li2012SBO/index.html" target="_blank">SURE-based Optimization for Adaptive Sampling and Reconstruction</a>,
+                                    <i>ACM SIGGRAPH Asia 2012</i>
+                                </li>
+                            </ul>
+                        </div>     
+                    </p>
+                </div>
+            </div>
+            <br>
 
-            <hr class="style-two">
-                <div>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 150px;" src="projects/xr/inception.png"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 150px;" src="projects/xr/truecolor.jpg"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 150px;" src="projects/xr/truecolor2.jpg"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 150px;" src="projects/xr/arcadesaga.jpg"/>
-                    <p><font size="+1"><b>Extended Reality</b></font></p>
-                    <p style="margin-top: -0.8em;"><b>Related works: </b></p>
-                    <ul style="margin-top: -0.8em; margin-bottom: 0.5em;">
-                        <li>
-                            Inception: Virtual Studio System for Film Production,
-                            <i>&copy; 2019 Toppano</i>
-                        </li>
-                        <li>
-                            TrueColor,
-                            <i>&copy; 2011-2021 HTC Corporation</i>
-                        </li>
-                        <li>
-                            Arcade Saga,
-                            <i>&copy; 2011-2021 HTC Corporation</i>
-                        </li>
-                        <li>
-                            Electronic device, method for displaying an augmented reality scene and non-transitory computer-readable medium,
-                            <i>ROC Patent No. I711966</i>
-                        </li>
-                        <li>
-                            Virtual reality device, image processing method, and non-transitory computer-readable medium,
-                            <i>ROC Patent No. I684163</i>
-                        </li>
-                    </ul> 
+            <div class="row vert-offset-top-1 vert-offset-bottom-1" style="max-width: 100%;">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="projects/vr_games.png" data-lightbox="example_vr_games" 
+                       data-title="VR Games and MR Tools">
+                       <img class="img-thumbnail center-block" src="projects/vr_games.png" alt="VR Games and MR Tools"/>
+                    </a>
                 </div>
+                <div class="col-md-9">
+                    <p><font size="+1"><b>VR Games and MR Tools</b></font> &nbsp <b class="label_vr">XR</b> <b class="label_cg">CG</b> <b class="label_cv">CV</b> <br>                    
+                        Extended reality (XR) including VR, AR, and MR have attracted lots of attention in the past decade. Recently the 
+                        idea of Metaverse proposed by Meta have aroused another lively discussion. There is no doubt that XR techniques
+                        will become one of the most important computer technology in the near future. I have participated in production 
+                        of two VR games and several MR techniques when I worked in HTC.
+                        <br>
+                        <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#vr_games_mr_tools" aria-expanded="false">show / hide related works ...</a></span>
+                        <div class="collapse" id="vr_games_mr_tools">
+                            <ul class="publication-list" style="margin-top: -0.8em;">
+                                <li>
+                                    TrueColor,
+                                    <i>&copy; 2011-2021 HTC Corporation</i>
+                                </li>
+                                <li>
+                                    Arcade Saga,
+                                    <i>&copy; 2011-2021 HTC Corporation</i>
+                                </li>
+                                <li>
+                                    Electronic device, method for displaying an augmented reality scene and non-transitory computer-readable medium,
+                                    <i>ROC Patent No. I711966</i>
+                                </li>
+                                <li>
+                                    Virtual reality device, image processing method, and non-transitory computer-readable medium,
+                                    <i>ROC Patent No. I684163</i>
+                                </li>
+                            </ul>
+                        </div>     
+                    </p>
+                </div>
+            </div>
+            <br>
 
-            <hr class="style-two">
-                <div>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 145px;" src="projects/image/msrf1.png"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 145px;" src="projects/editing/stylepart.png"/>
-                    <img class="img-thumbnail center-block" style="max-width:100%; height: 145px;" src="projects/editing/clipflip.png"/>
-                    <p><font size="+1"><b>Image Enhancement and Intuitive Editing</b></font></p>
-                    <p style="margin-top: -0.8em;"><b>Related works: </b></p>
-                    <ul style="margin-top: -0.8em; margin-bottom: 0.5em;">
-                        <li>
-                            StylePart: Image-based Shape Part Manipulation,
-                            <i>arXiv 2021</i>
-                        </li>
-                        <li>
-                            <a href="publications/Wu2021MSR/index.html" target="_blank">Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion</a>,
-                            <i>HPG 2021</i>
-                        </li>
-                        <li>
-                            <a href="publications/Shen2021CMC/index.html" target="_blank">ClipFlip: Multi-view Clipart Design</a>,
-                            <i>CGF 2021</i>
-                        </li>
-                    </ul> 
+            <div class="row vert-offset-top-1 vert-offset-bottom-1" style="max-width: 100%;">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="projects/virtual_studio.png" data-lightbox="example_virtual_studio" 
+                       data-title="Virtual Studio System for Movie Production">
+                       <img class="img-thumbnail center-block" src="projects/virtual_studio.png" alt="Virtual Studio"/>
+                    </a>
                 </div>
+                <div class="col-md-9">
+                    <p><font size="+1"><b>Virtual Studio System for Movie Production</b></font> &nbsp <b class="label_vr">XR</b> <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_cg">CG</b> <br>                    
+                        We built a virtual studio system for movie production at Toppano. With our system, movie directors
+                        can preview the real-time compositing of real performers, virtual environment, and digital visual effects in the 
+                        progress of filming. Such that, they can minimize the gaps between the final production and their imagination. To
+                        build this system, we have developed several techniques including RGB-D video enhancement, virtual lighting augmentation,
+                        real-time matting, and multiple object tracking.
+                        <br>
+                        <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#virtual_studio" aria-expanded="false">show / hide related works ...</a></span>
+                        <div class="collapse" id="virtual_studio">
+                            <ul class="publication-list" style="margin-top: -0.8em;">
+                                <li>
+                                    <a href="publications/Wu2021MSR/index.html" target="_blank">Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion</a>,
+                                    <i>HPG 2021</i>
+                                </li>
+                                <li>
+                                    Inception: Virtual Studio System for Film Production,
+                                    <i>&copy; 2019 Toppano</i>
+                                </li>
+                            </ul>
+                        </div>     
+                    </p>
+                </div>
+            </div>
+            <br>
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1" style="max-width: 100%;">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="projects/image_enhancement.png" data-lightbox="example_image_enhancement" 
+                       data-title="Image and Video Enhancement">
+                       <img class="img-thumbnail center-block" src="projects/image_enhancement.png" alt="Image/Video Enhancement"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><font size="+1"><b>Image and Video Enhancement</b></font> &nbsp <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_cg">CG</b> <br>                    
+                        Sometimes the images or videos captured by acquisition devices contain defects due to imperfect hardware or 
+                        an uncontrolled environment. Software algorithms are employed to enhance the captured images or videos. 
+                        We have proposed a novel real-time depth completion algorithm for filling the holes of depth maps captured
+                        by consumer-level RGB-D cameras. Our method can better preserve depth boundaries than previous methods; 
+                        while maintaining real-time frame rate.
+                        <br>
+                        <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#image_enhancement" aria-expanded="false">show / hide related works ...</a></span>
+                        <div class="collapse" id="image_enhancement">
+                            <ul class="publication-list" style="margin-top: -0.8em;">
+                                <li>
+                                    <a href="publications/Wu2021MSR/index.html" target="_blank">Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion</a>,
+                                    <i>HPG 2021</i>
+                                </li>
+                            </ul>
+                        </div>     
+                    </p>
+                </div>
+            </div>
+            <br>
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1" style="max-width: 100%;">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="projects/image_editing.png" data-lightbox="example_image_editing" 
+                       data-title="Intuitive Image Editing">
+                       <img class="img-thumbnail center-block" src="projects/image_editing.png" alt="Intuitive Image Editing"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><font size="+1"><b>Intuitive Image Editing</b></font> &nbsp <b class="label_cv">CV</b> <b class="label_learning">AI</b> <b class="label_im">IM</b> <b class="label_cg">CG</b>  <br>                    
+                        Creating or modifying digital content usually requires professional skills in editing tools. To
+                        allow more intuitive editing for general users, we leverage AI techniques to design efficient image 
+                        editing systems. For general users, our systems can assist them in creating their desired content, which
+                        is very difficult to do on their own. For professional artists, our systems can greatly reduce the time 
+                        and effort to finish the jobs.
+                        <br>
+                        <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#image_editing" aria-expanded="false">show / hide related works ...</a></span>
+                        <div class="collapse" id="image_editing">
+                            <ul class="publication-list" style="margin-top: -0.8em;">
+                                <li>
+                                    StylePart: Image-based Shape Part Manipulation,
+                                    <i>arXiv 2021</i>
+                                </li>
+                                <li>
+                                    <a href="publications/Shen2021CMC/index.html" target="_blank">ClipFlip: Multi-view Clipart Design</a>,
+                                    <i>CGF 2021</i>
+                                </li>
+                            </ul>
+                        </div>     
+                    </p>
+                </div>
+            </div>
+            <br>
 
         </div>
 
