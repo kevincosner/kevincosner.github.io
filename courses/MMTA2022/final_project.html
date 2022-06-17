@@ -9,8 +9,14 @@
     
         <script src="https://smtpjs.com/v3/smtp.js"></script>  
         <script type="text/javascript">
+
+            var choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            
             function Generate()
             {
+                for (let j = 0; j < choices.length; j++)
+                    choices[j] = 0; 
+
                 var name = nameField.value;
                 if (name.length == 0)
                 {
@@ -30,7 +36,6 @@
                     return;
                 }
                 
-                choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                 choices[teamA1.selectedIndex]++;
                 choices[teamA2.selectedIndex]++;
                 choices[teamA3.selectedIndex]++;
@@ -47,7 +52,6 @@
                 if (choices[0] != 0)
                 {
                     alert("You don't finish all choices yet !");
-                    choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                     return;
                 }
                 for (let i = 1; i < choices.length; i++)
@@ -55,22 +59,20 @@
                     if (choices[gId] != 0)
                     {
                         alert("You shouldn't assign ranking to your team !");
-                        choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                         return;
                     }
                     if (choices[i] == 0 && i != gId)
                     {
                         alert("You don't assign ranking to Team " + i.toString() + "!");
-                        choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                         return;
                     }
                     if (choices[i] > 1)
                     {
                         alert("Multiple assignments to Team " + i.toString() + "!");
-                        choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
                         return;
                     }
                 }
+
                 var msg = "Name: " + name + "\n" + "School ID: " + schId + "\n" + "Group Number: " + gId + "\n";
                 msg += "Rank A: " + teamA1.selectedIndex + " , " + teamA2.selectedIndex + " , " + teamA3.selectedIndex + "\n";
                 msg += "Rank B: " + teamB1.selectedIndex + " , " + teamB2.selectedIndex + " , " + teamB3.selectedIndex + " , " + teamB4.selectedIndex + "\n";
