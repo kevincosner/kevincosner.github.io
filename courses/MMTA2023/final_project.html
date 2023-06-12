@@ -10,7 +10,7 @@
         <script src="https://smtpjs.com/v3/smtp.js"></script>  
         <script type="text/javascript">
 
-            var choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            var choices = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             
             function Generate()
             {
@@ -30,25 +30,28 @@
                     return;
                 }
                 var gId = groupNumber.value;
-                if (gId < 1 || gId > 14)
+                if (gId < 1 || gId > 17)
                 {
-                    alert("The group number should be from 1 to 14 !");
+                    alert("The group number should be from 1 to 17 !");
                     return;
                 }
                 
-                choices[teamA1.selectedIndex]++;
-                choices[teamA2.selectedIndex]++;
-                choices[teamA3.selectedIndex]++;
-                choices[teamB1.selectedIndex]++;
-                choices[teamB2.selectedIndex]++;
-                choices[teamB3.selectedIndex]++;
-                choices[teamB4.selectedIndex]++;
-                choices[teamC1.selectedIndex]++;
-                choices[teamC2.selectedIndex]++;
-                choices[teamC3.selectedIndex]++;
-                choices[teamC4.selectedIndex]++;
-                choices[teamD1.selectedIndex]++;
-                choices[teamD2.selectedIndex]++;
+                choices[rank01.selectedIndex]++;
+                choices[rank02.selectedIndex]++;
+                choices[rank03.selectedIndex]++;
+                choices[rank04.selectedIndex]++;
+                choices[rank05.selectedIndex]++;
+                choices[rank06.selectedIndex]++;
+                choices[rank07.selectedIndex]++;
+                choices[rank08.selectedIndex]++;
+                choices[rank09.selectedIndex]++;
+                choices[rank10.selectedIndex]++;
+                choices[rank11.selectedIndex]++;
+                choices[rank12.selectedIndex]++;
+                choices[rank13.selectedIndex]++;
+                choices[rank14.selectedIndex]++;
+                choices[rank15.selectedIndex]++;
+                choices[rank16.selectedIndex]++;
                 if (choices[0] != 0)
                 {
                     alert("You don't finish all choices yet !");
@@ -74,10 +77,22 @@
                 }
 
                 var msg = "Name: " + name + "\n" + "School ID: " + schId + "\n" + "Group Number: " + gId + "\n";
-                msg += "Rank A: " + teamA1.selectedIndex + " , " + teamA2.selectedIndex + " , " + teamA3.selectedIndex + "\n";
-                msg += "Rank B: " + teamB1.selectedIndex + " , " + teamB2.selectedIndex + " , " + teamB3.selectedIndex + " , " + teamB4.selectedIndex + "\n";
-                msg += "Rank C: " + teamC1.selectedIndex + " , " + teamC2.selectedIndex + " , " + teamC3.selectedIndex + " , " + teamC4.selectedIndex + "\n";
-                msg += "Rank D: " + teamD1.selectedIndex + " , " + teamD2.selectedIndex + "\n";
+                msg += "01st: " + rank01.selectedIndex + "\n";
+                msg += "02nd: " + rank02.selectedIndex + "\n"; 
+                msg += "03rd: " + rank03.selectedIndex + "\n";
+                msg += "04th: " + rank04.selectedIndex + "\n";
+                msg += "05th: " + rank05.selectedIndex + "\n";
+                msg += "06th: " + rank06.selectedIndex + "\n";
+                msg += "07th: " + rank07.selectedIndex + "\n";
+                msg += "08th: " + rank08.selectedIndex + "\n";
+                msg += "09th: " + rank09.selectedIndex + "\n";
+                msg += "10th: " + rank10.selectedIndex + "\n";
+                msg += "11th: " + rank11.selectedIndex + "\n";
+                msg += "12th: " + rank12.selectedIndex + "\n";
+                msg += "13th: " + rank13.selectedIndex + "\n";
+                msg += "14th: " + rank14.selectedIndex + "\n";
+                msg += "15th: " + rank15.selectedIndex + "\n";
+                msg += "16th: " + rank16.selectedIndex + "\n";
                 prompt("Please copy the following text and send an email to: yutingwu@mail.ntpu.edu.tw", msg);
             }
         </script>
@@ -243,121 +258,166 @@
             <hr class="style-two">
             
 
-            <!--
             <font size=+1><b><i>Submit Your Ranking!</i></b></font><br>
-            Please choose <b>3 A</b>, <b>4 B</b>, <b>4 C</b>, and <b>2 D</b> <font color="red"><b>(Exclude your team!)</b></font>
+            Please rank the 16 other teams <font color="red"><b>(exclude your team!)</b></font>
             <br>
             <div id="ranking">
-                <p class="abstract" style="padding-top: 8; line-height: 2;">
+                <p class="abstract" style="padding-top: 8; line-height: 2; font-size: small; width: 800px;">
                     <b>My Name</b> &nbsp;&nbsp; <input type="text" id="nameField" style="width: 100; height: 25; text-align: center;"></input>
                     &nbsp;&nbsp;
                     <b>My School ID</b> &nbsp;&nbsp; <input type="text" id="schoolId" style="width: 120; height: 25; text-align: center;"></input>
                     &nbsp;&nbsp;
-                    <b>My Group Number</b> &nbsp;&nbsp; <input type="number" id="groupNumber" style="width: 80; height: 25; text-align: center;"></input>
+                    <b>My Group Number</b> &nbsp;&nbsp; <input type="number" id="groupNumber" min="1" max="17" style="width: 80; height: 25; text-align: center;"></input>
                     <br>
-                    My choices are (order does not matter)
+                    My ranking is:
                     <br>
-                    <b>3 A Teams:</b> <br>
-                    <select id="teamA1">
-                        <option>"A" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamA2">
-                        <option>"A" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamA3">
-                        <option>"A" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
+                    <b>First Prize: </b>
+                    <select id="rank01">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
                     </select>
                     <br>
-                    
-                    <b>4 B Teams:</b> <br>
-                    <select id="teamB1">
-                        <option>"B" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamB2">
-                        <option>"B" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamB3">
-                        <option>"B" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamB4">
-                        <option>"B" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
+                    <b>Second Prize: </b>
+                    <select id="rank02">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
                     </select>
                     <br>
-
-                    <b>4 C Teams:</b> <br> 
-                    <select id="teamC1">
-                        <option>"C" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamC2">
-                        <option>"C" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamC3">
-                        <option>"C" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    <select id="teamC4">
-                        <option>"C" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
+                    <b>Third Prize: </b>
+                    <select id="rank03">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
                     </select>
                     <br>
-                    
-                    <b>2 D Teams:</b> <br> 
-                    <select id="teamD1">
-                        <option>"D" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
+                    <b>04th</b>
+                    <select id="rank04">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
                     </select>
-                    &nbsp;&nbsp;
-                    <select id="teamD2">
-                        <option>"D" Team</option>
-                        <option>01: 最長骨牌距離大對決！</option><option>02: 捍衛家園</option><option>03: 乞丐超人</option><option>04: 皮卡丘尋孩記</option><option>05: 就決定是你了!</option>
-                        <option>06: 咻~棒球隊</option><option>07: 名為希望的絕望之淵</option><option>08: 毀滅大魔王 Pac Man</option><option>09: 跑跑卡打車</option><option>10: 兄弟旋風</option>
-                        <option>11: NO RUN NO LIFE</option><option>12: robot</option><option>13: 我與方方</option><option>14: 牠 It</option>
+                    <br>
+                    <b>05th</b>
+                    <select id="rank05">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
                     </select>
-                 </p>
+                    <br>
+                    <b>06th</b>
+                    <select id="rank06">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>07th</b>
+                    <select id="rank07">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>08th</b>
+                    <select id="rank08">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>09th</b>
+                    <select id="rank09">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>10th</b>
+                    <select id="rank10">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>11th</b>
+                    <select id="rank11">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>12th</b>
+                    <select id="rank12">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>13th</b>
+                    <select id="rank13">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>14th</b>
+                    <select id="rank14">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>15th</b>
+                    <select id="rank15">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                    <br>
+                    <b>16th</b>
+                    <select id="rank16">
+                        <option>-----</option>
+                        <option>Team01:</option><option>Team02:</option><option>Team03:</option><option>Team04:</option><option>Team05:</option>
+                        <option>Team06:</option><option>Team07:</option><option>Team08:</option><option>Team09:</option><option>Team10:</option>
+                        <option>Team11:</option><option>Team12:</option><option>Team13:</option><option>Team14:</option><option>Team15:</option>
+                        <option>Team16:</option><option>Team17:</option>
+                    </select>
+                </p>
                  <div class="btn btn-outline vert-offset-top-1" role="button" style="cursor: pointer;" onclick="Generate()"><b>Generate</b></div>
             </div>
-            -->
+            
 
             <br><br><br><br>
             </center>
