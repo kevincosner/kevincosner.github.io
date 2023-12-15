@@ -1,0 +1,196 @@
+
+<html>
+    <head>
+        <title> Improving Cache Placement for Cache-based Rendering  - Interactive Comparison </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="css/style.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="js/report.css">
+        <script src="js/ImageBox.js"></script>
+
+        <script type="text/javascript">
+            // 0: result, 1: ablation.
+            var curMode = 0;
+            var curScene = "bathroom";
+
+            var imageBoxes = [
+                {
+                    "elements": [
+                        "images/Bathroom/REF.png",
+                        "images/Bathroom/IM.png",
+                        "images/Bathroom/SD.png",
+                        "images/Bathroom/AC.png",
+                        "images/Bathroom/VGC.png",
+                        "images/Bathroom/FGS.png",
+                    ],
+                    "enableInsets": true,
+                    "insetSize": 120,
+                    "insetZoom": 1,
+                    "insetNum": 6,
+                    "names": [
+                        "REF",
+                        "IM",
+                        "SD",
+                        "SD+AC",
+                        "VGC",
+                        "VGC+DGS",
+                    ],
+                    "title": "bathroom",
+                    "quantitativeComparison": "images/ResultComparison/bathroom_quantitative_comparison.png"
+                }
+            ];
+        
+            var imageFiles = ["REF.png", "IM.png", "SD.png", "AC.png", "VGC.png", "FGS.png"];
+            var resultImageBox;
+
+            function Init() {
+                SetMode(curMode);
+                SetScene(curScene);
+            }
+
+            function SetMode(newMode) {
+                curMode = newMode;
+                if (curMode === 0) {
+                    resultBtn = document.getElementById("resultBtn");
+                    resultBtn.className = "mode_selected";
+                    
+                    resultDesp = document.getElementById("resultDesp");
+                    resultDesp.style.display = "block";                    
+                }
+                else {
+                    resultBtn = document.getElementById("resultBtn");
+                    resultBtn.className = "mode_unselected";
+                    
+                    resultDesp = document.getElementById("resultDesp");
+                    resultDesp.style.display = "none";
+                }
+                UpdateComparison();
+            }
+
+            function SetScene(newScene) {
+                curScene = newScene;
+                UpdateComparison(curScene);
+            }
+
+            function UpdateComparison() {                               
+                // Remove old comparison div.
+                RemoveComparisonDiv();
+
+                if (curMode == 0) {
+                    var resultCompare = document.createElement("div");
+                    resultCompare.className = "content";
+                    resultCompare.id = "resultComparison";
+                    resultCompare.style.width = 800;
+                    document.body.appendChild(resultCompare);
+
+                    imageBoxes[0].title = curScene;
+                    for (var i = 0; i < imageFiles.length; ++i) 
+                        imageBoxes[0].elements[i] = "images/" + curScene + "/" + imageFiles[i];
+                    // imageBoxes[0].quantitativeComparison = "images/" + curScene + "/" quantitative_comparison.png";
+                    resultImageBox = new ImageBox(resultCompare, imageBoxes[0]);
+                }
+            }
+
+            function RemoveComparisonDiv() {
+                // Remove old divs.
+                var prevResultCompare = document.getElementById("resultComparison");
+                if (prevResultCompare) {
+                    prevResultCompare.remove();
+                }
+            }
+        </script>
+
+    </head>
+    
+    <body onload="Init()">
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Improving Sample Distribution for Cache-based Rendering</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://jdily.github.io/">I-Chao Shen</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+    
+        <br>
+        <a href="https://new.ntpu.edu.tw/">National Taipei University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <br>
+        <br>
+
+
+        <p>
+            All results are generated on a machine with 8-core Intel Core i7-10700 CPU (using 16 cores) and 72GB RAM.<br>
+            Image viewer is borrowed from <a href="https://cs.dartmouth.edu/~wjarosz/publications/bitterli19selectively.html">this page</a>.
+        </p>
+
+        <p>
+        <font size=+1><b>Scene (click on the thumbnail to select the scene)</b></font>
+        <br><br>
+
+        <font><b>Irradiance Caching (40K caches)</b></font>
+        <table>
+            <tr>
+                <td width="245"><center><img class="img-fluid rounded" src="images/CornellBoxIrC/REF.png" width="240" onclick="SetScene('CornellBoxIrC')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/CrytekSponza/REF.png" width="240" onclick="SetScene('CrytekSponza')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/ConferenceIrC/REF.png" width="240" onclick="SetScene('ConferenceIrC')" style="cursor: pointer;"></img></center></td>
+            </tr>
+            <tr>
+                <td width="245"><center>CornellBox</center></td>
+                <td width="245"><center>CrytekSponza</center></td>
+                <td width="245"><center>Conference</center></td>
+            </tr>
+        </table>
+        <br>
+
+        <font><b>Importance Caching (25K caches)</b></font>
+        <table>
+            <tr>
+                <td width="245"><center><img class="img-fluid rounded" src="images/CornellBoxImC/REF.png" width="240" onclick="SetScene('CornellBoxImC')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/Robots/REF.png" width="240" onclick="SetScene('Robots')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/Sibenik/REF.png" width="240" onclick="SetScene('Sibenik')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/DiningRoom/REF.png" width="240" onclick="SetScene('DiningRoom')" style="cursor: pointer;"></img></center></td>
+            </tr>
+            <tr>
+                <td width="245"><center>CornellBox</center></td>
+                <td width="245"><center>Robots</center></td>
+                <td width="245"><center>Sibenik</center></td>
+                <td width="245"><center>DiningRoom</center></td>
+            </tr>
+        </table>
+        <br>
+
+        <font><b>Ambient Occlusion (120K caches)</b></font>
+        <table>
+            <tr>
+                <td width="245"><center><img class="img-fluid rounded" src="images/Statues/REF.png" width="240" onclick="SetScene('Statues')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/Bathroom/REF.png" width="240" onclick="SetScene('Bathroom')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/ConferenceAO/REF.png" width="240" onclick="SetScene('ConferenceAO')" style="cursor: pointer;"></img></center></td>
+                <td width="245"><center><img class="img-fluid rounded" src="images/Kitchen/REF.png" width="240" onclick="SetScene('Kitchen')" style="cursor: pointer;"></img></center></td>
+            </tr>
+            <tr>
+                <td width="245"><center>Statues</center></td>
+                <td width="245"><center>Bathroom</center></td>
+                <td width="245"><center>Conference</center></td>
+                <td width="245"><center>Kitchen</center></td>
+            </tr>
+        </table>
+        <br>
+        </p>
+
+        <div id="resultDesp">
+        <font size=+1><b>Compared methods:<br></b></font>
+        <i>Image-Space Uniform Sampling <b>(IM)</b></i><br>
+        <i>Spatial-Directional Shading Point Clustering by a 6D BVH  <b>(SD)</b></i> [Ou and Pellacini 2011]<br>
+        <i>Spatial-Directional Shading Point Clustering with Adaptive Caching <b>(SD+AC)</b></i> [Yoshida et al. 2015]<br>
+        <i>View-Guided Clustering Only <b>(VGC)</b></i> [Our method]<br>
+        <i>View-Guided Clustering <b>(VGC)</b> with Discontinuity-Guided Sampling <b>(DGS)</b></i> [Our full method]
+        </div>
+        
+        <div class="content" id="resultComparison"></div>
+        
+        <br>
+
+    </body>
+</html>
+
+
+    

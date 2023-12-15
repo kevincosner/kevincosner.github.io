@@ -37,6 +37,33 @@
 
             <div class="row vert-offset-top-1 vert-offset-bottom-1">
                 <div class="col-md-3">
+                    <a class="example-image-link" href="publications/Wu2023ICP/thumb.png" data-lightbox="example-Wu2023ICP" 
+                       data-title="Improving Cache Placement for Efficient Cache-based Rendering">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wu2023ICP/thumb.png" alt="Improving Cache Placement for Efficient Cache-based Rendering"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>Improving Cache Placement for Efficient Cache-based Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
+                    <u>Yu-Ting Wu</u>, I-Chao Shen<br>
+                    <i>The Visual Computer 2023</i><br>
+                    <span>(a new method for generating better cache distribution for cache-based rendering algorithms)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2023_icp_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+                    <div class="collapse" id="wu_2023_icp_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper proposes a new method to improve cache placement for various rendering algorithms using caching techniques. The proposed method comprises two stages. The first stage computes an initial cache distribution based on shading points’ geometric proximity. We present a view-guided method to cluster shading points based on their world-space positions and surface normals, while considering the camera view to avoid producing small clusters in the final image. The proposed method is more robust and easier to control than previous shading point clustering methods. After computing the shading functions at the initial cache locations, the second stage of our method utilizes the results to allocate additional caches to regions with shading discontinuities. To achieve this, a discontinuity map is created to identify these regions and used to insert new caches based on importance sampling. We integrate the proposed method into several cache-based algorithms, including irradiance caching, importance caching, and ambient occlusion. Extensive experiments show that our method outperforms other cache distributions, producing better results both numerically and visually.
+                        </p>
+                    </div>
+                    <!--
+                    <a href="publications/Wu2023ICP/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="publications/Wu2023ICP/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
+                    -->
+                </div>
+            </div>
+            <br>
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
                     <!--<a class="example-image-link" href="publications/Chiu2023MVS/thumb.png" data-lightbox="example-Chiu2023MVS" 
                        data-title="360MVSNet: Deep Multi-view Stereo Network with 360° Images for Indoor Scene Reconstruction">
                        <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Chiu2023MVS/thumb.png" alt="360MVSNet: Deep Multi-view Stereo Network with 360° Images for Indoor Scene Reconstruction"/>
