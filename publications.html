@@ -32,8 +32,44 @@
             <a class="anchor" name="publications"></a>
             <h3 class="my-3">Selected Publications</h3>
 
-            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2023</i></b></p>
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2024</i></b></p>
             <hr class="style-two">
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
+                    <a class="example-image-link" href="publications/Shen2021SIS/thumb.png" data-lightbox="example-Shen2021SIS" 
+                       data-title="StylePart: Image-based Shape Part Manipulation">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Shen2021SIS/thumb.png" alt="StylePart: Image-based Shape Part Manipulation"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>StylePart: Image-based Shape Part Manipulation</b> &nbsp <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_learning">AI</b> <br>
+                    I-Chao Shen, Li-Wen Su, <u>Yu-Ting Wu</u>, Bing-Yu Chen<br>
+                    <i>The Visual Computer, to appear</i><br>
+                    <span>(a shape-consistent latent mapping function that connects the latent space of image and 3D shape attributes)</span><br>
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2021_sis_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+                    <div class="collapse" id="shen_2021_sis_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Due to a lack of image-based <i>"part controllers"</i>, shape manipulation of man-made shape images, such as 
+                            resizing the backrest of a chair or replacing a cup handle is not intuitive because of the lack of image-based part 
+                            controllers. To tackle this problem, we present <b><i>StylePart</i></b>, a framework that enables direct shape manipulation of an image 
+                            by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping 
+                            function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method 
+                            <i>"forwardly maps"</i> the image content to its corresponding 3D shape attributes, where the shape part can be easily 
+                            manipulated. The attribute codes of the manipulated 3D shape are then <i>"backwardly mapped"</i> to the image latent code to 
+                            obtain the final manipulated image. We demonstrate our approach through various manipulation tasks, including part 
+                            replacement, part resizing, and viewpoint manipulation, and evaluate its effectiveness through extensive ablation studies.
+                        </p>
+                    </div>
+                    <a href="https://arxiv.org/abs/2111.10520" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">arXiv</a>
+                    <!--
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Paper (Coming Soon)</a>
+                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">BibTex (Coming Soon)</a>
+                    -->
+                </div>
+            </div>
+            <br>
 
             <div class="row vert-offset-top-1 vert-offset-bottom-1">
                 <div class="col-md-3">
@@ -45,7 +81,7 @@
                 <div class="col-md-9">
                     <p><b>Improving Cache Placement for Efficient Cache-based Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
                     <u>Yu-Ting Wu</u>, I-Chao Shen<br>
-                    <i>The Visual Computer, to appear</i><br>
+                    <i>The Visual Computer, 2024</i><br>
                     <span>(a new method for generating better cache distribution for cache-based rendering algorithms)</span><br>
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2023_icp_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
@@ -53,6 +89,7 @@
                         <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper proposes a new method to improve cache placement for various rendering algorithms using caching techniques. The proposed method comprises two stages. The first stage computes an initial cache distribution based on shading points’ geometric proximity. We present a view-guided method to cluster shading points based on their world-space positions and surface normals, while considering the camera view to avoid producing small clusters in the final image. The proposed method is more robust and easier to control than previous shading point clustering methods. After computing the shading functions at the initial cache locations, the second stage of our method utilizes the results to allocate additional caches to regions with shading discontinuities. To achieve this, a discontinuity map is created to identify these regions and used to insert new caches based on importance sampling. We integrate the proposed method into several cache-based algorithms, including irradiance caching, importance caching, and ambient occlusion. Extensive experiments show that our method outperforms other cache distributions, producing better results both numerically and visually.
                         </p>
                     </div>
+                    <a href="https://link.springer.com/article/10.1007/s00371-023-03231-z" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                     <!--
                     <a href="publications/Wu2023ICP/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Wu2023ICP/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
@@ -61,6 +98,9 @@
                 </div>
             </div>
             <br>
+
+            <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2023</i></b></p>
+            <hr class="style-two">
 
             <div class="row vert-offset-top-1 vert-offset-bottom-1">
                 <div class="col-md-3">
@@ -91,6 +131,7 @@
                     </div>
                     <a href="publications/Chiu2023MVS/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Chiu2023MVS/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10030812" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                     <!--
                     <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
                     -->
@@ -128,6 +169,7 @@
                     </div>
                     <a href="publications/Chung2022SFU/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Chung2022SFU/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://bmvc2022.mpi-inf.mpg.de/89/" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                     <!--
                     <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
                     -->
@@ -163,6 +205,7 @@
                     </div>
                     <a href="publications/Hsu2022SDN/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Hsu2022SDN/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="https://bmvc2022.mpi-inf.mpg.de/345/" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                     <!--
                     <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
                     -->
@@ -173,41 +216,6 @@
             <p style="color:rgb(179, 179, 179); text-align: right; margin-top: -0.5em; margin-bottom: -1em; font-size: 14px;"><b><i>2021</i></b></p>
             <hr class="style-two">
 
-            <div class="row vert-offset-top-1 vert-offset-bottom-1">
-                <div class="col-md-3">
-                    <a class="example-image-link" href="publications/Shen2021SIS/thumb.png" data-lightbox="example-Shen2021SIS" 
-                       data-title="StylePart: Image-based Shape Part Manipulation">
-                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Shen2021SIS/thumb.png" alt="StylePart: Image-based Shape Part Manipulation"/>
-                    </a>
-                </div>
-                <div class="col-md-9">
-                    <p><b>StylePart: Image-based Shape Part Manipulation</b> &nbsp <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_learning">AI</b> <br>
-                    I-Chao Shen, Li-Wen Su, <u>Yu-Ting Wu</u>, Bing-Yu Chen<br>
-                    <i>arXiv 2021</i><br>
-                    <span>(a shape-consistent latent mapping function that connects the latent space of image and 3D shape attributes)</span><br>
-                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2021_sis_abstract" aria-expanded="false">show / hide abstract ...</a></span>
-                    </p>
-                    <div class="collapse" id="shen_2021_sis_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Due to a lack of image-based <i>"part controllers"</i>, shape manipulation of man-made shape images, such as 
-                            resizing the backrest of a chair or replacing a cup handle is not intuitive because of the lack of image-based part 
-                            controllers. To tackle this problem, we present <b><i>StylePart</i></b>, a framework that enables direct shape manipulation of an image 
-                            by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping 
-                            function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method 
-                            <i>"forwardly maps"</i> the image content to its corresponding 3D shape attributes, where the shape part can be easily 
-                            manipulated. The attribute codes of the manipulated 3D shape are then <i>"backwardly mapped"</i> to the image latent code to 
-                            obtain the final manipulated image. We demonstrate our approach through various manipulation tasks, including part 
-                            replacement, part resizing, and viewpoint manipulation, and evaluate its effectiveness through extensive ablation studies.
-                        </p>
-                    </div>
-                    <a href="https://arxiv.org/abs/2111.10520" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">arXiv</a>
-                    <!--
-                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
-                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Paper (Coming Soon)</a>
-                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">BibTex (Coming Soon)</a>
-                    -->
-                </div>
-            </div>
-            <br>
             <div class="row vert-offset-top-1 vert-offset-bottom-1">
                 <div class="col-md-3">
                     <a class="example-image-link" href="publications/Wang2021LCR/thumb.gif" data-lightbox="example-Wang2021LCR" 
@@ -234,7 +242,7 @@
                     <a href="publications/Wang2021LCR/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
                     <a href="publications/Wang2021LCR/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Wang2021LCR/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="https://doi.org/10.1145/3478513.3480561" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://doi.org/10.1145/3478513.3480561" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
             <br>
@@ -267,7 +275,7 @@
                     <a href="publications/Wu2021MSR/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <!--<a href="publications/Wu2021MSR/slides.pptx" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Slides</a>-->
                     <a href="publications/Wu2021MSR/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="https://diglib.eg.org/handle/10.2312/hpg20211280" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://diglib.eg.org/handle/10.2312/hpg20211280" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
             <br>
@@ -301,7 +309,7 @@
                     <a href="publications/Shen2021CMC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="https://arxiv.org/abs/2008.12933" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">arXiv</a>
                     <a href="publications/Shen2021CMC/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14190" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14190" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
             <br>
@@ -336,7 +344,7 @@
                     <a href="publications/Wu2015DMS/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
                     <a href="publications/Wu2015DMS/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Wu2015DMS/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="https://ieeexplore.ieee.org/document/6994841" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://ieeexplore.ieee.org/document/6994841" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
             
@@ -412,7 +420,7 @@
                     <a href="publications/Wu2013VC/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
                     <a href="publications/Wu2013VC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="publications/Wu2013VC/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="https://ieeexplore.ieee.org/document/6464264" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://ieeexplore.ieee.org/document/6464264" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
             
@@ -449,7 +457,7 @@
                     <a href="publications/Li2012SBO/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <!--<a href="publications/Li2012SBO/slides.pptx" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Slides</a>-->
 					<a href="publications/Li2012SBO/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="https://dl.acm.org/doi/10.1145/2366145.2366213" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://dl.acm.org/doi/10.1145/2366145.2366213" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
             <br>
@@ -471,7 +479,7 @@
                     </p>
                     <br>
                     <a href="publications/Wu2012VC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
-                    <a href="https://dl.acm.org/doi/10.1145/2407156.2407205" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DL</a>
+                    <a href="https://dl.acm.org/doi/10.1145/2407156.2407205" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
                 </div>
             </div>
 
