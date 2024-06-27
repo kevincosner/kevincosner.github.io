@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title> StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis</h3>
+        
+        Wei-Chieh Chung<b>*</b><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        Jian-Kai Zhu<b>*</b><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://jdily.github.io/">I-Chao Shen</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.csie.ntu.edu.tw/~cyy/">Yung-Yu Chuang</a><sup>1</sup>
+        <br>
+        <b>(*: joint first authors)</b>
+
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://new.ntpu.edu.tw/">National Taipei University</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <br>
+        <br>
+    
+        <div><a href="images/teaser.png"><img class="img-fluid rounded" src="images/teaser.png" width=800></a></div>
+        <div>
+            <p>
+            When only one view is used to generate a face model, (c) the result will usually include artifacts. (e) Our method generates 
+            a high-quality model of the entire face by integrating of information from the original and symmetric views.
+            </p>
+        </div>
+    
+        <hr class="style-two">
+        <p>
+        <font size=+1><b>Abstract</b></font><br>
+        Recent deep image generation models, such as StyleGAN2, face challenges to produce high-quality 2D face images with multi-view 
+        consistency. We address this issue by proposing an approach for generating detailed 3D faces using a pre-trained StyleGAN2 model. 
+        Our method estimates the 3D Morphable Model (3DMM) coefficients directly from the StyleGAN2’s stylecode. To add more details to 
+        the produced 3D face models, we train a generator to produce two UV maps: a diffuse map to give the model a more faithful 
+        appearance and a generalized displacement map to add geometric details to the model. To achieve multi-view consistency, we also 
+        add a symmetric view image to recover information regarding the invisible side of a single image. The generated detailed 3D face 
+        models allow for consistent changes in viewing angles, expressions, and lighting conditions. Experimental results indicate that 
+        our method outperforms previous approaches both qualitatively and quantitatively.
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Publication</b></font><br>
+        Wei-Chieh Chung*, Jian-Kai Zhu*, I-Chao Shen, Yu-Ting Wu, Yung-Yu Chuang (*: joint first authors) <br>
+        StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis. <br>
+        Proceedings of British Machine Vision Conference (BMVC) 2022. <a href="citation.bib">BibTex</a><br>
+        <a href="paper.pdf" target="_blank">BMVC 2022 Paper (5.6MB PDF)</a><br>
+        <a href="https://bmvc2022.mpi-inf.mpg.de/89/" target="_blank">Digital library</a>    
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Supplemental</b></font><br>
+        <a target="_blank" href="supplemental.pdf" >BMVC 2022 supplementary document (6.0MB PDF)</a><br>
+        <a target="_blank" href="poster.pdf" >BMVC 2022 poster (1.4MB PDF)</a><br>
+        </p>
+
+        <br>
+
+    </body>
+</html>
+    
