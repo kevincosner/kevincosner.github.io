@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <title> StylePart: Image-based Shape Part Manipulation </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">StylePart: Image-based Shape Part Manipulation</h3>
+        
+        <a href="https://jdily.github.io/">I-Chao Shen</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        Li-Wen Su<sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://graphics.im.ntu.edu.tw/~robin/">Bing-Yu Chen</a><sup>2</sup>
+        
+        <br>
+        <a href="https://www.u-tokyo.ac.jp/en/">The University of Tokyo</a><sup>3</sup> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.ntu.edu.tw/">National Taiwan University</a><sup>1</sup> &nbsp;&nbsp;&nbsp;
+        <a href="https://new.ntpu.edu.tw/">National Taipei University</a><sup>2</sup> &nbsp;&nbsp;&nbsp;
+        <br>
+        <br>
+    
+        <div><a href="images/teaser.png"><img class="img-fluid rounded" src="images/teaser.png" width=800></a></div>
+        <div>
+            <p>
+            <b>Overview of StylePart.</b>  (a) We first project the input image into the GAN latent space, and (b) map the projected GAN latent 
+            code w_input to its corresponding shape attributes and viewing angle using a forward shape-consistent latent mapping function. (c) 
+            A user can directly manipulate the image shape at the part-level. Then, we obtain the manipulated GAN latent code w_manipulate by (d) 
+            mapping the manipulated attributes to the GAN latent space with a backward mapping function. Finally, we (e) synthesize the final 
+            edited image without the need of any 3D workflow.
+            </p>
+        </div>
+    
+        <hr class="style-two">
+        <p>
+        <font size=+1><b>Abstract</b></font><br>
+        Direct part-level manipulation of man-made shapes in an image is desired given its simplicity. However, it is not intuitive given the 
+        existing manually created cuboid and cylinder controllers. To tackle this problem, we present <b>StylePart</b>, a framework that enables 
+        direct shape manipulation of an image by leveraging generative models of both images and 3D shapes. Our key contribution is a 
+        shape-consistent latent mapping function that connects the image generative latent space and the 3D man-made shape attribute latent space. 
+        Our method “forwardly maps” the image content to its corresponding 3D shape attributes, where the shape part can be easily manipulated. 
+        The attribute codes of the manipulated 3D shape are then “backwardly mapped” to the image latent code to obtain the final manipulated 
+        image. By using both forward and backward mapping, an user can edit the image directly without resorting to any 3D workflow. We 
+        demonstrate our approach through various manipulation tasks, including part replacement, part resizing, and shape orientation manipulation, 
+        and evaluate its effectiveness through extensive ablation studies.
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Publication</b></font><br>
+        I-Chao Shen, Li-Wen Su, Yu-Ting Wu, Bing-Yu Chen <br>
+        StylePart: Image-based Shape Part Manipulation. <br>
+        The Visual Computer, April 2024. <br>
+        <a href="paper.pdf" target="_blank">The Visual Computer 2024 Paper (2.5MB PDF)</a><br>
+        <a href="https://link.springer.com/article/10.1007/s00371-024-03310-9" target="_blank">Digital library</a>    
+        </p>
+
+        <br>
+
+    </body>
+</html>
+    

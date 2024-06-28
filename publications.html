@@ -50,24 +50,14 @@
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2024_sis_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="shen_2024_sis_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Due to a lack of image-based <i>"part controllers"</i>, shape manipulation of man-made shape images, such as 
-                            resizing the backrest of a chair or replacing a cup handle is not intuitive because of the lack of image-based part 
-                            controllers. To tackle this problem, we present <b><i>StylePart</i></b>, a framework that enables direct shape manipulation of an image 
-                            by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping 
-                            function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method 
-                            <i>"forwardly maps"</i> the image content to its corresponding 3D shape attributes, where the shape part can be easily 
-                            manipulated. The attribute codes of the manipulated 3D shape are then <i>"backwardly mapped"</i> to the image latent code to 
-                            obtain the final manipulated image. We demonstrate our approach through various manipulation tasks, including part 
-                            replacement, part resizing, and viewpoint manipulation, and evaluate its effectiveness through extensive ablation studies.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Direct part-level manipulation of man-made shapes in an image is desired given its simplicity. However, it is not intuitive 
+                        given the existing manually created cuboid and cylinder controllers. To tackle this problem, we present <b>StylePart</b>, a framework that enables direct shape manipulation of an image by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method “forwardly maps” the image content to its corresponding 3D shape attributes, where the shape part can be easily manipulated. The attribute codes of the manipulated 3D shape are then “backwardly mapped” to the image latent code to obtain the final manipulated image. By using both forward and backward mapping, an user can edit the image directly without resorting to any 3D workflow. We demonstrate our approach through various manipulation tasks, including part replacement, part resizing, and shape orientation manipulation, and evaluate its effectiveness through extensive ablation studies.
                         </p>
                     </div>
-                    <a href="publications/Shen2024SIS/paper.pdf" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
+                    <a href="publications/Shen2024SIS/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Shen2024SIS/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
                     <a href="https://arxiv.org/abs/2111.10520" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">arXiv</a>
                     <a href="https://doi.org/10.1007/s00371-024-03310-9" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
-                    <!--
-                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
-                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">BibTex (Coming Soon)</a>
-                    -->
                 </div>
             </div>
             <br>
@@ -90,12 +80,9 @@
                         <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper proposes a new method to improve cache placement for various rendering algorithms using caching techniques. The proposed method comprises two stages. The first stage computes an initial cache distribution based on shading points’ geometric proximity. We present a view-guided method to cluster shading points based on their world-space positions and surface normals, while considering the camera view to avoid producing small clusters in the final image. The proposed method is more robust and easier to control than previous shading point clustering methods. After computing the shading functions at the initial cache locations, the second stage of our method utilizes the results to allocate additional caches to regions with shading discontinuities. To achieve this, a discontinuity map is created to identify these regions and used to insert new caches based on importance sampling. We integrate the proposed method into several cache-based algorithms, including irradiance caching, importance caching, and ambient occlusion. Extensive experiments show that our method outperforms other cache distributions, producing better results both numerically and visually.
                         </p>
                     </div>
+                    <a href="publications/Wu2023ICP/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href="publications/Wu2023ICP/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper (author ver.)</a>
                     <a href="https://link.springer.com/article/10.1007/s00371-023-03231-z" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
-                    <!--
-                    <a href="publications/Wu2023ICP/paper.pdf"  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
-                    <a href="publications/Wu2023ICP/citation.bib" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
-                    <a href="" class="btn btn-outline vert-offset-top-1" role="button">Web (Coming Soon)</a>
-                    -->
                 </div>
             </div>
             <br>
