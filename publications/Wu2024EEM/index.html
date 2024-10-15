@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        <title> Efficient Environment Map Rendering based on Decomposition </title>
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=UTF-8">
+        <link rel="icon" href="../../images/icon.png">
+        <link href="../../css/style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div style="margin-left:auto; margin-right:auto; width:800">
+        <h3 class="my-3">Efficient Environment Map Rendering based on Decomposition</h3>
+        
+        <a href="https://kevincosner.github.io/">Yu-Ting Wu</a> &nbsp;&nbsp;&nbsp;
+        
+        <br>
+        <a href="http://www.ntu.edu.tw/">National Taipei University</a>
+        <br>
+        <br>
+    
+        <div><a href="images/teaser.png"><img class="img-fluid rounded" src="images/teaser.png" width=800></a></div>
+        <div>
+            <p>
+            <b>Equal-time comparisons of various environment map sampling methods.</b> We compare our methods to multiple importance sampling (MIS) 
+            [Pharr et al. 2016] and a global sampling method based on tone-mapped mean-shift (TMMS) [Feng et al. 2016]. All methods were rendered
+            using a CPU ray tracer [PJH16] with 4 seconds. TMMS and our method employ interleaved sampling to reduce shadow boundary artifacts
+            caused by evaluating lighting with a small global set of lights for all shading points. Our method generates significantly less noise than 
+            MIS and renders more accurate shadows and shading than TMMS. It also achieves the lowest RMSE and FLIP [Andersson et al. 2021] errors. The 
+            error visualization of FLIP is shown in the top-left corners of the rendered images, with brighter pixels indicating larger errors.
+            </p>
+        </div>
+    
+        <hr class="style-two">
+        <p>
+        <font size=+1><b>Abstract</b></font><br>
+        This paper presents an efficient environment map sampling algorithm designed to render high-quality, low-noise images with only a few light samples, 
+        making it ideal for real-time applications. We observe that bright pixels in the environment map produce high-frequency shading effects, such as 
+        sharp shadows and shading, while the rest influence the overall tone of the scene. Building on this insight, our approach differs from existing 
+        techniques by categorizing the pixels in an environment map into emissive and non-emissive regions and developing specialized algorithms tailored to 
+        the distinct properties of each region. By decomposing the environment lighting, we ensure that light sources are deposited on bright pixels, 
+        leading to more accurate shadows and specular highlights. Additionally, this strategy allows us to exploit the smoothness in the low-frequency 
+        component by rendering a smaller image with more lights, thereby enhancing shading accuracy. Extensive experiments demonstrate that our method 
+        significantly reduces shadow artifacts and image noise compared to previous techniques, while also achieving lower numerical errors across a range 
+        of illumination types, particularly under limited sample conditions.
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Publication</b></font><br>
+        Yu-Ting Wu. <br>
+        Efficient Environment Map Rendering based on Decomposition. <br>
+        Computer Graphics Forum (CGF), to appear, 2024. BibTeX (coming soon)<br>
+        CGF 2024 paper (coming soon)<br>
+        Digital library (coming soon)
+        </p>
+        <hr class="style-two">
+    
+        <p>
+        <font size=+1><b>Supplemental</b></font><br>
+        Additional results and comparisons (coming soon)
+        </p>
+        
+        <br>
+    
+    </body>
+</html>
+    

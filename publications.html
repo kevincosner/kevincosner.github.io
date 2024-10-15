@@ -37,6 +37,34 @@
 
             <div class="row vert-offset-top-1 vert-offset-bottom-1">
                 <div class="col-md-3">
+                    <a class="example-image-link" href="publications/Wu2024EEM/thumb.png" data-lightbox="example-Wu2024EEM" 
+                       data-title="Efficient Environment Map Rendering based on Decomposition">
+                       <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Wu2024EEM/thumb.png" alt="Efficient Environment Map Rendering based on Decomposition"/>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <p><b>Efficient Environment Map Rendering based on Decomposition</b> &nbsp <b class="label_cg">CG</b> <br>
+                    <u>Yu-Ting Wu</u><br>
+                    <i>Computer Graphics Forum, to appear</i><br>
+                    <!--<span>(an environment map sampling algorithm capable of rendering high-quality images using a few light samples)</span><br>-->
+                    <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2024_eem_abstract" aria-expanded="false">show / hide abstract ...</a></span>
+                    </p>
+                    <div class="collapse" id="wu_2024_eem_abstract">
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper presents an efficient environment map sampling algorithm designed to render high-quality, low-noise images with only a few light samples, making it ideal for real-time applications. We observe that bright pixels in the environment map produce high-frequency shading effects, such as sharp shadows and shading, while the rest influence the overall tone of the scene. Building on this insight, our approach differs from existing techniques by categorizing the pixels in an environment map into emissive and non-emissive regions and developing specialized algorithms tailored to the distinct properties of each region. By decomposing the environment lighting, we ensure that light sources are deposited on bright pixels, leading to more accurate shadows and specular highlights. Additionally, this strategy allows us to exploit the smoothness in the low-frequency component by rendering a smaller image with more lights, thereby enhancing shading accuracy. Extensive experiments demonstrate that our method significantly reduces shadow artifacts and image noise compared to previous techniques, while also achieving lower numerical errors across a range of illumination types, particularly under limited sample conditions.
+                        </p>
+                    </div>
+                    <a href="publications/Wu2024EEM/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
+                    <a href=""  target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper (coming soon)</a>
+                    <!--
+                    <a href="" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">BibTex</a>
+                    <a href="" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">DOI</a>
+                    -->
+                </div>
+            </div>
+            <br>
+
+            <div class="row vert-offset-top-1 vert-offset-bottom-1">
+                <div class="col-md-3">
                     <a class="example-image-link" href="publications/Shen2024SIS/thumb.png" data-lightbox="example-Shen2024SIS" 
                        data-title="StylePart: Image-based Shape Part Manipulation">
                        <img class="img-thumbnail center-block" style="max-width:100%" src="publications/Shen2024SIS/thumb.png" alt="StylePart: Image-based Shape Part Manipulation"/>
@@ -46,12 +74,11 @@
                     <p><b>StylePart: Image-based Shape Part Manipulation</b> &nbsp <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_learning">AI</b> <br>
                     I-Chao Shen, Li-Wen Su, <u>Yu-Ting Wu</u>, Bing-Yu Chen<br>
                     <i>The Visual Computer, April 2024</i><br>
-                    <span>(a shape-consistent latent mapping function that connects the latent space of image and 3D shape attributes)</span><br>
+                    <!--<span>(a shape-consistent latent mapping function that connects the latent space of image and 3D shape attributes)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2024_sis_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="shen_2024_sis_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Direct part-level manipulation of man-made shapes in an image is desired given its simplicity. However, it is not intuitive 
-                        given the existing manually created cuboid and cylinder controllers. To tackle this problem, we present <b>StylePart</b>, a framework that enables direct shape manipulation of an image by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method “forwardly maps” the image content to its corresponding 3D shape attributes, where the shape part can be easily manipulated. The attribute codes of the manipulated 3D shape are then “backwardly mapped” to the image latent code to obtain the final manipulated image. By using both forward and backward mapping, an user can edit the image directly without resorting to any 3D workflow. We demonstrate our approach through various manipulation tasks, including part replacement, part resizing, and shape orientation manipulation, and evaluate its effectiveness through extensive ablation studies.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Direct part-level manipulation of man-made shapes in an image is desired given its simplicity. However, it is not intuitive given the existing manually created cuboid and cylinder controllers. To tackle this problem, we present <b>StylePart</b>, a framework that enables direct shape manipulation of an image by leveraging generative models of both images and 3D shapes. Our key contribution is a shape-consistent latent mapping function that connects the image generative latent space and the 3D man-made shape attribute latent space. Our method “forwardly maps” the image content to its corresponding 3D shape attributes, where the shape part can be easily manipulated. The attribute codes of the manipulated 3D shape are then “backwardly mapped” to the image latent code to obtain the final manipulated image. By using both forward and backward mapping, an user can edit the image directly without resorting to any 3D workflow. We demonstrate our approach through various manipulation tasks, including part replacement, part resizing, and shape orientation manipulation, and evaluate its effectiveness through extensive ablation studies.
                         </p>
                     </div>
                     <a href="publications/Shen2024SIS/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -73,7 +100,7 @@
                     <p><b>Improving Cache Placement for Efficient Cache-based Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
                     <u>Yu-Ting Wu</u>, I-Chao Shen<br>
                     <i>The Visual Computer, January 2024</i><br>
-                    <span>(a new method for generating better cache distribution for cache-based rendering algorithms)</span><br>
+                    <!--<span>(a new method for generating better cache distribution for cache-based rendering algorithms)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2023_icp_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="wu_2023_icp_abstract">
@@ -102,19 +129,11 @@
                     <p><b>360MVSNet: Deep Multi-view Stereo Network with 360° Images for Indoor Scene Reconstruction</b> &nbsp <b class="label_cv">CV</b> <b class="label_learning">AI</b> <br>
                     Ching-Ya Chiu, <u>Yu-Ting Wu</u>, I-Chao Shen, Yung-Yu Chuang<br>
                     <i>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2023</i><br>
-                    <span>(a deep network using multiple 360° images for large indoor scene reconstruction)</span><br>
+                    <!--<span>(a deep network using multiple 360° images for large indoor scene reconstruction)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#chiu_2023_mvs_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="chiu_2023_mvs_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Recent multi-view stereo methods have achieved promising results with the advancement of deep learning techniques.
-                            Despite of the progress, due to the limited fields of view of regular images, reconstructing large indoor environments still requires collecting many 
-                            images with sufficient visual overlap, which is quite labor-intensive. 360° images cover a much larger field of view than regular images and would 
-                            facilitate the capture process. In this paper, we present <b><i>360MVSNet</i></b>, the first deep learning network for multi-view stereo with 360° images. 
-                            Our method combines uncertainty estimation with a spherical sweeping module for 360° images captured from multiple viewpoints in order to construct 
-                            multi-scale cost volumes. By regressing volumes in a coarse-to-fine manner, high-resolution depth maps can be obtained. Furthermore, we have constructed 
-                            <b><i>EQMVS</i></b>, a large-scale synthetic dataset that consists of over 50K pairs of RGB and depth maps in equirectangular projection. Experimental 
-                            results demonstrate that our method can reconstruct large synthetic and real-world indoor scenes with significantly better completeness than previous 
-                            traditional and learning-based methods while saving both time and effort in the data acquisition process.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Recent multi-view stereo methods have achieved promising results with the advancement of deep learning techniques. Despite of the progress, due to the limited fields of view of regular images, reconstructing large indoor environments still requires collecting many images with sufficient visual overlap, which is quite labor-intensive. 360° images cover a much larger field of view than regular images and would facilitate the capture process. In this paper, we present <b><i>360MVSNet</i></b>, the first deep learning network for multi-view stereo with 360° images. Our method combines uncertainty estimation with a spherical sweeping module for 360° images captured from multiple viewpoints in order to construct multi-scale cost volumes. By regressing volumes in a coarse-to-fine manner, high-resolution depth maps can be obtained. Furthermore, we have constructed <b><i>EQMVS</i></b>, a large-scale synthetic dataset that consists of over 50K pairs of RGB and depth maps in equirectangular projection. Experimental results demonstrate that our method can reconstruct large synthetic and real-world indoor scenes with significantly better completeness than previous traditional and learning-based methods while saving both time and effort in the data acquisition process.
                         </p>
                     </div>
                     <a href="publications/Chiu2023MVS/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -139,17 +158,11 @@
                     <p><b>StyleFaceUV: a 3D Face UV Map Generator for View-Consistent Face Image Synthesis</b> &nbsp <b class="label_cv">CV</b> <b class="label_cg">CG</b> <b class="label_learning">AI</b> <br>
                     Wei-Chieh Chung*, Jian-Kai Zhu*, I-Chao Shen, <u>Yu-Ting Wu</u>, Yung-Yu Chuang <b>(*: joint first authors)</b><br>
                     <i>British Machine Vision Conference (BMVC) 2022</i><br>
-                    <span>(an approach for generating detailed 3D faces using a pre-trained StyleGAN2 model)</span><br>
+                    <!--<span>(an approach for generating detailed 3D faces using a pre-trained StyleGAN2 model)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#chung_2022_sfu_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="chung_2022_sfu_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Recent deep image generation models, such as StyleGAN2, face challenges to produce high-quality 2D face images with 
-                            multi-view consistency. We address this issue by proposing an approach for generating detailed 3D faces using a pre-trained StyleGAN2 model. Our method 
-                            estimates the 3D Morphable Model (3DMM) coefficients directly from the StyleGAN2’s stylecode. To add more details to the produced 3D face models, we train 
-                            a generator to produce two UV maps: a diffuse map to give the model a more faithful appearance and a generalized displacement map to add geometric details
-                            to the model. To achieve multi-view consistency, we also add a symmetric view image to recover information regarding the invisible side of a single image. 
-                            The generated detailed 3D face models allow for consistent changes in viewing angles, expressions, and lighting conditions. Experimental results indicate 
-                            that our method outperforms previous approaches both qualitatively and quantitatively.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Recent deep image generation models, such as StyleGAN2, face challenges to produce high-quality 2D face images with multi-view consistency. We address this issue by proposing an approach for generating detailed 3D faces using a pre-trained StyleGAN2 model. Our method estimates the 3D Morphable Model (3DMM) coefficients directly from the StyleGAN2’s stylecode. To add more details to the produced 3D face models, we train a generator to produce two UV maps: a diffuse map to give the model a more faithful appearance and a generalized displacement map to add geometric details to the model. To achieve multi-view consistency, we also add a symmetric view image to recover information regarding the invisible side of a single image. The generated detailed 3D face models allow for consistent changes in viewing angles, expressions, and lighting conditions. Experimental results indicate that our method outperforms previous approaches both qualitatively and quantitatively.
                         </p>
                     </div>
                     <a href="publications/Chung2022SFU/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -170,19 +183,11 @@
                     <p><b>ScannerNet: A Deep Network for Scanner-Quality Document Images under Complex Illumination</b> &nbsp <b class="label_cv">CV</b> <b class="label_im">IM</b> <b class="label_learning">AI</b> <br>
                     Chih-Jou Hsu, <u>Yu-Ting Wu</u>, Ming-Sui Lee, Yung-Yu Chuang<br>
                     <i>British Machine Vision Conference (BMVC) 2022</i><br>
-                    <span>(a deep network for correcting photometric distortion on document images)</span><br>
+                    <!--<span>(a deep network for correcting photometric distortion on document images)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#hsu_2022_sdn_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="hsu_2022_sdn_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Document images captured by smartphones and digital cameras are often subject to photometric distortions, including 
-                            shadows, non-uniform shading, and color shift due to the imperfect white balance of sensors. Readers are confused by an indistinguishable background and 
-                            content, which significantly reduces legibility and visual quality. Despite the fact that real photographs often contain a mixture of these distortions, 
-                            the majority of existing approaches to document illumination correction concentrate on only a small subset of these distortions. This paper presents 
-                            <b><i>ScannerNet</i></b>, a comprehensive method that can eliminate complex photometric distortions using deep learning. In order to exploit the different 
-                            characteristics of shadow and shading, our model consists of a sub-network for shadow removal followed by a sub-network for shading correction. To train 
-                            our model, we also devise a data synthesis method to efficiently construct a large-scale document dataset with a great deal of variation. Our extensive 
-                            experiments demonstrate that our method significantly enhances visual quality by removing shadows and shading, preserving figure colors, and improving 
-                            legibility.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Document images captured by smartphones and digital cameras are often subject to photometric distortions, including shadows, non-uniform shading, and color shift due to the imperfect white balance of sensors. Readers are confused by an indistinguishable background and content, which significantly reduces legibility and visual quality. Despite the fact that real photographs often contain a mixture of these distortions, the majority of existing approaches to document illumination correction concentrate on only a small subset of these distortions. This paper presents <b><i>ScannerNet</i></b>, a comprehensive method that can eliminate complex photometric distortions using deep learning. In order to exploit the different characteristics of shadow and shading, our model consists of a sub-network for shadow removal followed by a sub-network for shading correction. To train our model, we also devise a data synthesis method to efficiently construct a large-scale document dataset with a great deal of variation. Our extensive experiments demonstrate that our method significantly enhances visual quality by removing shadows and shading, preserving figure colors, and improving legibility.
                         </p>
                     </div>
                     <a href="publications/Hsu2022SDN/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -207,16 +212,11 @@
                     <p><b>Learning to Cluster for Rendering with Many Lights</b> &nbsp <b class="label_cg">CG</b> <b class="label_learning">AI</b> <br>
                     Yu-Chen Wang, <u>Yu-Ting Wu</u>, Tzu-Mao Li, Yung-Yu Chuang<br>
                     <i>ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2021), December 2021</i><br>
-                    <span>(a progressive many-light rendering algorithm that can learn to cluster and sample lights)</span><br>
+                    <!--<span>(a progressive many-light rendering algorithm that can learn to cluster and sample lights)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wang_2021_lcr_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
                     <div class="collapse" id="wang_2021_lcr_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present an unbiased online Monte Carlo method for rendering with many lights. Our method adapts both the hierarchical light clustering and
-                            the sampling distribution to our collected samples. Designing such a method requires us to make clustering decisions under noisy observation, and making
-                            sure that the sampling distribution adapts to our target. Our method is based on two key ideas: a coarse-to-fine clustering scheme that can find good
-                            clustering configurations even with noisy samples, and a discrete stochastic successive approximation method that starts from a prior distribution and
-                            provably converges to a target distribution. We compare to other state-of-the-art light sampling methods, and show better results both numerically
-                            and visually.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present an unbiased online Monte Carlo method for rendering with many lights. Our method adapts both the hierarchical light clustering and the sampling distribution to our collected samples. Designing such a method requires us to make clustering decisions under noisy observation, and making sure that the sampling distribution adapts to our target. Our method is based on two key ideas: a coarse-to-fine clustering scheme that can find good clustering configurations even with noisy samples, and a discrete stochastic successive approximation method that starts from a prior distribution and provably converges to a target distribution. We compare to other state-of-the-art light sampling methods, and show better results both numerically and visually.
                         </p>
                     </div>
                     <a href="publications/Wang2021LCR/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -237,18 +237,11 @@
                     <p><b>Multi-Resolution Shared Representative Filtering for Real-Time Depth Completion</b> &nbsp <b class="label_cg">CG</b> <b class="label_cv">CV</b> <b class="label_im">IM</b> <br>
                     <u>Yu-Ting Wu</u>, Tzu-Mao Li, I-Chao Shen, Hong-Shiang Lin, Yung-Yu Chuang<br>
                     <i>High-Performance Graphics (HPG) 2021</i><br>
-                    <span>(a real-time depth completion algorithm for effectively handling large missing regions of depth maps)</span><br>
+                    <!--<span>(a real-time depth completion algorithm for effectively handling large missing regions of depth maps)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2021_msr_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
 					<div class="collapse" id="wu_2021_msr_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present shared representative filtering for real-time high-resolution depth completion with RGB-D sensors. Conventional
-                            filtering-based methods face a dilemma when the missing regions of the depth map are large. When the filter window is small, the filter fails 
-                            to include enough samples. On the other hand, when the window is large, the method could oversmooth depth boundaries due to the error introduced 
-                            by the extra samples. Our method adapts the filter kernels to the shape of the missing regions to collect a sufficient number of samples while 
-                            avoiding oversmoothing. We collect depth samples by searching for a small set of similar pixels, which we call the representatives, using an 
-                            efficient line search algorithm. We then combine the representatives using a joint bilateral weight. Experiments show that our method can filter 
-                            a high-resolution depth map within a few milliseconds while outperforming previous filtering-based methods on both real-world and synthetic data 
-                            in terms of both efficiency and accuracy, especially when dealing with large missing regions in depth maps.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present shared representative filtering for real-time high-resolution depth completion with RGB-D sensors. Conventional filtering-based methods face a dilemma when the missing regions of the depth map are large. When the filter window is small, the filter fails to include enough samples. On the other hand, when the window is large, the method could oversmooth depth boundaries due to the error introduced by the extra samples. Our method adapts the filter kernels to the shape of the missing regions to collect a sufficient number of samples while avoiding oversmoothing. We collect depth samples by searching for a small set of similar pixels, which we call the representatives, using an efficient line search algorithm. We then combine the representatives using a joint bilateral weight. Experiments show that our method can filter a high-resolution depth map within a few milliseconds while outperforming previous filtering-based methods on both real-world and synthetic data in terms of both efficiency and accuracy, especially when dealing with large missing regions in depth maps.
                         </p>
                     </div>
                     <a href="publications/Wu2021MSR/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -271,18 +264,11 @@
                     <p><b>ClipFlip: Multi-view Clipart Design</b> &nbsp <b class="label_cg">CG</b> <b class="label_cv">CV</b> <b class="label_learning">AI</b> <br>
                     I-Chao Shen, Kuan-Hung Liu, Li-Wen Su, <u>Yu-Ting Wu</u>, Bing-Yu Chen<br>
                     <i>Computer Graphics Forum, February 2021</i><br>
-                    <span>(an assistive system for clipart design by providing visual scaffolds from the unseen view points)</span><br>
+                    <!--<span>(an assistive system for clipart design by providing visual scaffolds from the unseen view points)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#shen_2020_cmc_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
 					<div class="collapse" id="shen_2020_cmc_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present an assistive system for clipart design by providing visual scaffolds from the unseen viewpoints. Inspired by the artists’
-                            creation process, our system constructs the visual scaffold by first synthesizing the reference 3D shape of the input clipart and rendering it from the 
-                            desired viewpoint. The critical challenge of constructing this visual scaffold is to generate a reference 3D shape that matches the user’s expectations 
-                            in terms of object sizing and positioning while preserving the geometric style of the input clipart. To address this challenge, we propose a user-assisted 
-                            curve extrusion method to obtain the reference 3D shape. We render the synthesized reference 3D shape with a consistent style into the visual scaffold. 
-                            By following the generated visual scaffold, the users can efficiently design clipart with their desired viewpoints. The user study conducted by an intuitive
-                            user interface and our generated visual scaffold suggests that our system is especially useful for estimating the ratio and scale between object parts and 
-                            can save on average 57% of drawing time.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We present an assistive system for clipart design by providing visual scaffolds from the unseen viewpoints. Inspired by the artists’ creation process, our system constructs the visual scaffold by first synthesizing the reference 3D shape of the input clipart and rendering it from the desired viewpoint. The critical challenge of constructing this visual scaffold is to generate a reference 3D shape that matches the user’s expectations in terms of object sizing and positioning while preserving the geometric style of the input clipart. To address this challenge, we propose a user-assisted curve extrusion method to obtain the reference 3D shape. We render the synthesized reference 3D shape with a consistent style into the visual scaffold. By following the generated visual scaffold, the users can efficiently design clipart with their desired viewpoints. The user study conducted by an intuitive user interface and our generated visual scaffold suggests that our system is especially useful for estimating the ratio and scale between object parts and can save on average 57% of drawing time.
                         </p>
                     </div>
                     <a href="publications/Shen2021CMC/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -309,16 +295,11 @@
                     <p><b>Dual-Matrix Sampling for Scalable Translucent Material Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
                     <u>Yu-Ting Wu</u>, Tzu-Mao Li, Yu-Hsun Lin, Yung-Yu Chuang<br>
                     <i>IEEE Transactions on Visualization and Computer Graphics (TVCG), March 2015</i><br>
-                    <span>(a scalable algorithm for rendering plenty of translucent objects under complex illumination)</span><br>
+                    <!--<span>(a scalable algorithm for rendering plenty of translucent objects under complex illumination)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2015_dms_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
 					<div class="collapse" id="wu_2015_dms_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper introduces a scalable algorithm for rendering translucent materials with complex lighting. We represent the light transport 
-                           with a diffusion approximation by a dual-matrix representation with the <i>Light-to-Surface</i> and <i>Surface-to-Camera</i> matrices. By exploiting the structures within 
-                           the matrices, the proposed method can locate surface samples with little contribution by using only subsampled matrices and avoid wasting computation on these 
-                           samples. The decoupled estimation of irradiance and diffuse BSSRDFs also allows us to have a tight error bound, making the adaptive diffusion approximation 
-                           more efficient and accurate. Experiments show that our method outperforms previous methods for translucent material rendering, especially in large scenes with 
-						   massive translucent surfaces shaded by complex illumination.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper introduces a scalable algorithm for rendering translucent materials with complex lighting. We represent the light transport with a diffusion approximation by a dual-matrix representation with the <i>Light-to-Surface</i> and <i>Surface-to-Camera</i> matrices. By exploiting the structures within the matrices, the proposed method can locate surface samples with little contribution by using only subsampled matrices and avoid wasting computation on these samples. The decoupled estimation of irradiance and diffuse BSSRDFs also allows us to have a tight error bound, making the adaptive diffusion approximation more efficient and accurate. Experiments show that our method outperforms previous methods for translucent material rendering, especially in large scenes with massive translucent surfaces shaded by complex illumination.
                         </p>
                     </div>
                     <a href="publications/Wu2015DMS/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -343,23 +324,12 @@
                     <p><b>Sampling and Reconstruction Techniques for Efficient Monte Carlo Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
                     <u>Yu-Ting Wu</u>, advised by Yung-Yu Chuang<br>
                     <i>Doctor of Philosophy in Computer Science and Information Engineering, National Taiwan University, June 2014</i></br>
-                    <span>(a coherent view of my Ph.D. research with background reviews)</span><br>
+                    <!--<span>(a coherent view of my Ph.D. research with background reviews)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2014_dissertation_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
 					<div class="collapse" id="wu_2014_dissertation_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Two of the most important tasks that computer graphics techniques try to solve is rendering photo-realistic images and performing 
-                           numerically accurate simulation. Physically-based rendering can naturally satisfy these two goals. It is usually simulated by the Monte Carlo ray tracing 
-                           for handling a variety of sophisticated light transport paths in a united manner. Despite its generality and simplicity, however, Monte Carlo integration 
-                           converges slowly. Rendering scenes with lots of complex geometry and realistic materials under complex illumination usually requires a large number of 
-                           samples to produce a noise-free image. <br>
-                           &nbsp&nbsp&nbsp&nbsp In this dissertation, we proposed three advanced sampling and reconstruction algorithms for improving the performance of Monte Carlo 
-                           integration. First, realizing that in complex scenes visibility is usually the major source of noise during sampling the shading function, we developed a 
-                           method called <b><i>VisibilityCluster</i></b> for efficiently approximating visibility function. By integrating it into importance sampling framework, we achieve 
-                           superior noise reduction compared to previous approaches. Second, to reduce the computation overhead of rendering translucent materials, we proposed an 
-                           algorithm, <b><i>Dualmatrix sampling</i></b>, to avoid evaluating unimportant surface samples which contribute little to the final image. Finally, a general adaptive 
-                           sampling and reconstruction framework named <b><i>SURE-based optimization</i></b> is proposed to render a wide range of distributed effects, including depth of field, 
-                           motion blur, and global illumination. All of the three methods achieve significant performance improvement compared to the state-of-the-art rendering 
-                           algorithms.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp Two of the most important tasks that computer graphics techniques try to solve is rendering photo-realistic images and performing numerically accurate simulation. Physically-based rendering can naturally satisfy these two goals. It is usually simulated by the Monte Carlo ray tracing for handling a variety of sophisticated light transport paths in a united manner. Despite its generality and simplicity, however, Monte Carlo integration converges slowly. Rendering scenes with lots of complex geometry and realistic materials under complex illumination usually requires a large number of samples to produce a noise-free image. <br>
+                        &nbsp&nbsp&nbsp&nbsp In this dissertation, we proposed three advanced sampling and reconstruction algorithms for improving the performance of Monte Carlo integration. First, realizing that in complex scenes visibility is usually the major source of noise during sampling the shading function, we developed a method called <b><i>VisibilityCluster</i></b> for efficiently approximating visibility function. By integrating it into importance sampling framework, we achieve superior noise reduction compared to previous approaches. Second, to reduce the computation overhead of rendering translucent materials, we proposed an algorithm, <b><i>Dualmatrix sampling</i></b>, to avoid evaluating unimportant surface samples which contribute little to the final image. Finally, a general adaptive sampling and reconstruction framework named <b><i>SURE-based optimization</i></b> is proposed to render a wide range of distributed effects, including depth of field, motion blur, and global illumination. All of the three methods achieve significant performance improvement compared to the state-of-the-art rendering algorithms.
                         </p>
                     </div>
                     </p>
@@ -383,18 +353,11 @@
                     <p><b>VisibilityCluster: Average Directional Visibility for Many-Light Rendering</b> &nbsp <b class="label_cg">CG</b> <br>
                     <u>Yu-Ting Wu</u>, Yung-Yu Chuang<br>
                     <i>IEEE Transactions on Visualization and Computer Graphics (TVCG), September 2013</i><br>
-                    <span>(a method for efficient computation and compact representation of the visibility function for many-light rendering)</span><br>
+                    <!--<span>(a method for efficient computation and compact representation of the visibility function for many-light rendering)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#wu_2013_vc_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
 					<div class="collapse" id="wu_2013_vc_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper proposes the <b><i>VisibilityCluster</i></b> algorithm for efficient visibility approximation and representation in many-light rendering. 
-                           By carefully clustering lights and shading points, we can construct a visibility matrix that exhibits good local structures due to visibility coherence of 
-                           nearby lights and shading points. Average visibility can be efficiently estimated by exploiting the sparse structure of the matrix and shooting only few 
-                           shadow rays between clusters. Moreover, we can use the estimated average visibility as a quality measure for visibility estimation, enabling us to locally 
-                           refine VisibilityClusters with large visibility variance for improving accuracy. We demonstrate that, with the proposed method, visibility can be incorporated 
-                           into importance sampling at a reasonable cost for the manylight problem, significantly reducing variance in Monte Carlo rendering. In addition, the proposed 
-						   method can be used to increase realism of local shading by adding directional occlusion effects. Experiments show that the proposed technique outperforms 
-						   state-ofthe-art importance sampling algorithms, and successfully enhances the preview quality for lighting design.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp This paper proposes the <b><i>VisibilityCluster</i></b> algorithm for efficient visibility approximation and representation in many-light rendering. By carefully clustering lights and shading points, we can construct a visibility matrix that exhibits good local structures due to visibility coherence of nearby lights and shading points. Average visibility can be efficiently estimated by exploiting the sparse structure of the matrix and shooting only few shadow rays between clusters. Moreover, we can use the estimated average visibility as a quality measure for visibility estimation, enabling us to locally refine VisibilityClusters with large visibility variance for improving accuracy. We demonstrate that, with the proposed method, visibility can be incorporated into importance sampling at a reasonable cost for the manylight problem, significantly reducing variance in Monte Carlo rendering. In addition, the proposed method can be used to increase realism of local shading by adding directional occlusion effects. Experiments show that the proposed technique outperforms state-ofthe-art importance sampling algorithms, and successfully enhances the preview quality for lighting design.
                         </p>
                     </div>
                     <a href="publications/Wu2013VC/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -421,16 +384,11 @@
                     <i>ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2012) </i>
                     <!--<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight paper by the program chair</i></span>-->
                     <br>
-					<span>(an adaptive sampling and denoising method for Monte Carlo rendering using Stein's unbiased risk estimator)</span><br>
+					<!--<span>(an adaptive sampling and denoising method for Monte Carlo rendering using Stein's unbiased risk estimator)</span><br>-->
                     <span style="background-color: #ffffff; color: #1577A4; cursor: pointer;"><a data-toggle="collapse" data-target="#li_2012_sbo_abstract" aria-expanded="false">show / hide abstract ...</a></span>
                     </p>
 					<div class="collapse" id="li_2012_sbo_abstract">
-                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We apply <b><i>Stein’s Unbiased Risk Estimator (SURE)</i></b> to adaptive sampling and reconstruction to reduce noise in Monte Carlo rendering. 
-                           SURE is a general unbiased estimator for mean squared error (MSE) in statistics. With SURE, we are able to estimate error for an arbitrary reconstruction 
-                           kernel, enabling us to use more effective kernels rather than being restricted to the symmetric ones used in previous work. It also allows us to allocate 
-                           more samples to areas with higher estimated MSE. Adaptive sampling and reconstruction can therefore be processed within an optimization framework. We also 
-                           propose an efficient and memory-friendly approach to reduce the impact of noisy geometry features where there is depth of field or motion blur. Experiments 
-                           show that our method produces images with less noise and crisper details than previous methods.
+                        <p class="abstract">&nbsp&nbsp&nbsp&nbsp We apply <b><i>Stein’s Unbiased Risk Estimator (SURE)</i></b> to adaptive sampling and reconstruction to reduce noise in Monte Carlo rendering. SURE is a general unbiased estimator for mean squared error (MSE) in statistics. With SURE, we are able to estimate error for an arbitrary reconstruction kernel, enabling us to use more effective kernels rather than being restricted to the symmetric ones used in previous work. It also allows us to allocate more samples to areas with higher estimated MSE. Adaptive sampling and reconstruction can therefore be processed within an optimization framework. We also propose an efficient and memory-friendly approach to reduce the impact of noisy geometry features where there is depth of field or motion blur. Experiments show that our method produces images with less noise and crisper details than previous methods.
                         </p>
                     </div>
                     <a href="publications/Li2012SBO/index.html" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Web</a>
@@ -455,7 +413,7 @@
                     <i>ACM SIGGRAPH Asia 2012 Poster </i>
 					<!--<span style="background-color: #ffffff;color: #1577A4;"><i>selected as a highlight poster by the program chair</i></span>-->
                     <br>
-					<span>(an early version of our VisibilityCluster paper)</span><br>
+					<!--<span>(an early version of our VisibilityCluster paper)</span><br>-->
                     </p>
                     <br>
                     <a href="publications/Wu2012VC/paper.pdf" target="_blank" class="btn btn-outline vert-offset-top-1" role="button">Paper</a>
